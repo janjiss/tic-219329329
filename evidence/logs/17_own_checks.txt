@@ -1,0 +1,5 @@
+own photometry, 51810 points, 6 sectors; model mid-transit depth 9730 ppm
+ODD/EVEN: odd=9787±170  even=9600±174 ppm  -> 0.8 sigma
+SECONDARY @0.5: -196 ± 96 ppm (white) ; red-noise factor 1.35 -> -196 ± 130 ppm ; 3-sigma upper limit 390 ppm
+PER-TRANSIT: 34 transits over 1072 d ; linear ephemeris from individual times: T0=4156.74620±0.00039  P=3.4815844±0.0000031 ; timing chi2=38.7/32 ; rms 3.0 min (median err 2.8)
+             depth chi2=50.3/33 ; rms 869 ppm (median err 721)

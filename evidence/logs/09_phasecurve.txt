@@ -1,0 +1,8 @@
+segments: 13 points: 39378
+order 2: cos1=20±23  sin1(beaming)=167±22  cos2(-ellipsoidal)=-9±21  sin2=-41±20 ppm (white-noise errors; rms=2703)
+order 3: cos1=-105±25  sin1(beaming)=242±22  cos2(-ellipsoidal)=-5±21  sin2=-44±20 ppm (white-noise errors; rms=2684)
+order 4: cos1=-221±26  sin1(beaming)=208±24  cos2(-ellipsoidal)=-12±21  sin2=-11±20 ppm (white-noise errors; rms=2658)
+empirical (red-noise) 1-sigma from 373 random periods: cos1=121 sin1=121 cos2=54 sin2=55 ppm
+ELLIPSOIDAL semi-amp = 5 ± 54 ppm ; BEAMING semi-amp = 242 ± 121 ppm
+  ellipsoidal: 2214 ppm per unit mass ratio -> 3-sigma upper limit 167 ppm -> q < 0.075 -> M_c < 0.083 Msun = 87 Mjup
+  beaming: 3-sigma upper limit 603 ppm -> K < 50.3 km/s -> M_c < ~399 Mjup (0.381 Msun)

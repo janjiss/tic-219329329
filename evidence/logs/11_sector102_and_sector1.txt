@@ -1,0 +1,13 @@
+S102 corner pixel (14,0) sky position: RA=335.35386 Dec=-55.77718 ; median flux there=2475 e/s vs target peak=570 e/s
+  target 3x3                      dip = 12.9 ± 0.6 e/s  (21.6 sigma) ; fractional = 8648 ± 400 ppm ; per-transit dips: [10.3 15.  12.3 12.4 13.9 13.4]
+  corner 2x2 (bright star wing)   dip = 11.6 ± 9.9 e/s  (1.2 sigma) ; fractional = 2403 ± 2054 ppm ; per-transit dips: [-1.6  0.  -2.4  2.7 65.8  5.3]
+S1 header: camera/ccd 2 4 frames 1282
+S1: finite time 1282, quality==0 1267, all-finite frames 0, fraction NaN pixels 0.07
+S1: time range 1325.33-1353.16, median cadence 30.0 min
+S1 target pixel in cutout: (7.51, 7.88) ; median image row sums:
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+S1 quality flag values: [ 0 32 36]

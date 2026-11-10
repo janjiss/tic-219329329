@@ -1,0 +1,15 @@
+LSQ: T0=3157.53154 P=3.481585 k=0.1007 b=0.893 a/Rs=8.17  chi2red=0.988
+model mid-transit depth: 8721 ppm
+ODD/EVEN depth: odd=8648±155 ppm  even=8797±159 ppm  diff=-0.7 sigma
+PER-SECTOR depth:
+   S68: 9383 ± 269 ppm  (N transits=6)
+   S95: 8542 ± 259 ppm  (N transits=6)
+   S102: 8670 ± 260 ppm  (N transits=5)
+   S103: 8751 ± 232 ppm  (N transits=6)
+   S104: 8384 ± 231 ppm  (N transits=6)
+   weighted mean 8721 ppm; chi2=8.7 for 4 dof
+PER-TRANSIT:
+   N transits fit: 28 ; depth rms 759 ppm, median err 580 ppm ; O-C rms 3.2 min, median err 2.6 min
+   depth chi2 = 44.1 / 27 ; timing chi2 = 41.6 / 26
+SECONDARY @0.5: depth = -214 ± 84 ppm (-2.6 sigma); 3-sigma upper limit 251 ppm
+   most significant dip elsewhere: phase 0.397 depth 256 ± 91 ppm (2.8 sigma); scan rms of S/N = 1.29

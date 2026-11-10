@@ -1,0 +1,25 @@
+light_curve,run,false_positive_probability,nearby_false_positive_probability
+"Pipeline light curve, 10^7 samples",1,0.05258,0.0
+"Pipeline light curve, 10^7 samples",2,0.20201,0.0
+"Pipeline light curve, 10^7 samples",3,0.03702,0.0
+"Pipeline light curve, 10^7 samples",4,0.05303,0.0
+"Pipeline light curve, 10^7 samples",5,0.07185,0.0
+"Pipeline light curve, 10^7 samples",6,0.0612,0.0
+"Own photometry, 10^7 samples",1,0.08383,0.0
+"Own photometry, 10^7 samples",2,0.06421,0.0
+"Own photometry, 10^7 samples",3,0.06149,0.0
+"Own photometry, 10^7 samples",4,0.05206,0.0
+"Own photometry, 10^7 samples",5,0.03448,0.0
+"Own photometry, 10^7 samples",6,0.04544,0.0
+"Pipeline light curve, 10^6 samples (not converged)",1,0.47249,0.0
+"Pipeline light curve, 10^6 samples (not converged)",2,0.00857,0.0
+"Pipeline light curve, 10^6 samples (not converged)",3,0.05742,0.0
+"Pipeline light curve, 10^6 samples (not converged)",4,0.10014,0.0
+"Pipeline light curve, 10^6 samples (not converged)",5,0.2743,0.0
+"Pipeline light curve, 10^6 samples (not converged)",6,0.10403,0.0
+"Pipeline light curve, 10^6 samples (not converged)",7,0.24609,0.0
+"Pipeline light curve, 10^6 samples (not converged)",8,0.06476,0.0
+"Pipeline light curve, 10^6 samples (not converged)",9,0.03437,0.0
+"Pipeline light curve, 10^6 samples (not converged)",10,0.15889,0.0
+"Pipeline light curve, 10^6 samples (not converged)",11,0.00464,0.0
+"Pipeline light curve, 10^6 samples (not converged)",12,0.22704,0.0

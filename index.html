@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TIC 219329329.01 — evidence for a hot-Jupiter candidate</title>
+<meta name="description" content="Vetting evidence for TIC 219329329.01, a Jupiter-size planet candidate found in TESS data: transit, on-target tests, eclipsing-binary tests and false-positive probability. Likely planet, not yet validated.">
+<meta property="og:title" content="TIC 219329329.01 — evidence for a hot-Jupiter candidate">
+<meta property="og:description" content="A Jupiter-size object crosses a Sun-like star every 3.48 days. Every test, every data file and every script, linkable.">
+<meta property="og:type" content="article">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23f6c453'/%3E%3Ccircle cx='16' cy='27' r='3' fill='%230b0b0b'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script>try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4.8 8.3l2.2 2.2 4.2-4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 16 16"><path d="M8 1.8l6.6 11.6H1.4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 6.2v3.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="8" cy="11.6" r="0.9" fill="currentColor"/></symbol>
+  <symbol id="i-info" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 7.2v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="8" cy="4.7" r="0.9" fill="currentColor"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">TIC 219329329.01</a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#summary">Summary</a>
+      <a href="#detection">Signal</a>
+      <a href="#on-target">On target?</a>
+      <a href="#binary">Binary?</a>
+      <a href="#fpp">Statistics</a>
+      <a href="#parameters">Parameters</a>
+      <a href="#open-issues">Open issues</a>
+      <a href="#files">Files</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">Theme</button>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <p class="kicker">TESS planet candidate · independent vetting · November 2026</p>
+      <h1>TIC 219329329.01</h1>
+      <p class="lede">A Jupiter-size object crosses a Sun-like star 1,800 light-years away every 3.48 days. It passes every false-positive test run so far. <strong>Its mass has not been measured, so it is a candidate, not a confirmed planet.</strong></p>
+      <span class="pill pill-warn pill-lg"><svg><use href="#i-warn"/></svg>Likely planet · not validated</span>
+    </div>
+    <figure class="hero-art" style="margin:0">
+      <svg viewBox="0 0 300 300" role="img" aria-label="The star with the candidate crossing near its lower edge, drawn to scale">
+        <circle class="art-star" cx="150" cy="150" r="120"/>
+        <circle class="art-limb" cx="150" cy="150" r="120"/>
+        <line class="art-path" x1="14" x2="286" y1="254.4" y2="254.4"/>
+        <circle class="art-planet" cx="150" cy="254.4" r="12.6"/>
+        <text class="art-label" x="170" y="290">path of the candidate</text>
+      </svg>
+      <figcaption>Star and candidate to scale. The crossing is close to the star's edge, which makes the dip V-shaped.</figcaption>
+    </figure>
+  </div>
+
+  <ul class="tiles">
+    <li class="tile"><div class="tile-label">Orbital period</div><div class="tile-value">3.4816 <small>days</small></div><div class="tile-note">known to ±0.3 seconds</div></li>
+    <li class="tile"><div class="tile-label">Transit depth</div><div class="tile-value">0.97<small>%</small></div><div class="tile-note">of the star's light, for 2.1 hours</div></li>
+    <li class="tile"><div class="tile-label">Radius</div><div class="tile-value">1.24 <small>R<sub>Jup</sub></small></div><div class="tile-note">± 0.07</div></li>
+    <li class="tile"><div class="tile-label">False-positive probability</div><div class="tile-value">≈ 6<small>%</small></div><div class="tile-note">validation needs under 1.5%</div></li>
+    <li class="tile"><div class="tile-label">Mass</div><div class="tile-value">&lt; 87 <small>M<sub>Jup</sub></small></div><div class="tile-note">3σ upper limit, not a measurement</div></li>
+  </ul>
+</section>
+
+<section class="block" id="summary">
+  <h2>The evidence at a glance</h2>
+  <p class="section-intro">Fifteen pieces of evidence, each with its own link, data files and analysis script. All of it comes from public TESS full-frame images (sectors 68, 95, 102, 103, 104 and 105) and the Gaia DR3 catalogue.</p>
+  <div class="card">
+    <div class="table-wrap">
+    <table class="glance">
+      <thead><tr><th scope="col">Evidence</th><th scope="col">Result</th><th scope="col">Outcome</th></tr></thead>
+      <tbody>
+        <tr><td><span class="mono">E1</span><a href="#transit">Folded transit</a></td><td>0.97% dip lasting 2.09 h, seen about 35 times</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Detected</span></td></tr>
+        <tr><td><span class="mono">E2</span><a href="#light-curves">Every sector</a></td><td>Transits visible in all six sectors</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Detected</span></td></tr>
+        <tr><td><span class="mono">E3</span><a href="#period-search">Period search</a></td><td>One peak at 3.4816 d, signal-to-noise 59</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Detected</span></td></tr>
+        <tr><td><span class="mono">E4</span><a href="#centroid">Difference images</a></td><td>Dip is on the target within about 1″ in five of six sectors</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span></td></tr>
+        <tr><td><span class="mono">E5</span><a href="#neighbours">Neighbouring stars</a></td><td>None within 22″; all within 63″ total 0.28% of the target</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span></td></tr>
+        <tr><td><span class="mono">E6</span><a href="#aperture">Depth vs aperture</a></td><td>Same depth in 2×2, 3×3 and 5×5 pixel apertures</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span></td></tr>
+        <tr><td><span class="mono">E7</span><a href="#reduction">Depth vs reduction</a></td><td>Stable against detrending; one pipeline product disagrees</td><td><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>One anomaly</span></td></tr>
+        <tr><td><span class="mono">E8</span><a href="#density">Stellar density</a></td><td>Transit shape gives 0.61–0.73 solar; catalogues give 0.56–0.65</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span></td></tr>
+        <tr><td><span class="mono">E9</span><a href="#odd-even">Odd vs even transits</a></td><td>9745 ± 170 vs 9561 ± 173 ppm (0.8σ apart)</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span></td></tr>
+        <tr><td><span class="mono">E10</span><a href="#secondary">Secondary eclipse</a></td><td>None: −196 ± 130 ppm at phase 0.5</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span></td></tr>
+        <tr><td><span class="mono">E11</span><a href="#ellipsoidal">Tidal distortion</a></td><td>5 ± 54 ppm, so the companion is under 87 M<sub>Jup</sub> (3σ)</td><td><span class="pill pill-info"><svg><use href="#i-info"/></svg>Mass limit</span></td></tr>
+        <tr><td><span class="mono">E12</span><a href="#timing">Timing and prediction</a></td><td>Held-out sector arrives −0.7 ± 1.3 min from prediction</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span></td></tr>
+        <tr><td><span class="mono">E13</span><a href="#other-signals">Other signals</a></td><td>No other periodic dips; no variability at the orbital period</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span></td></tr>
+        <tr><td><span class="mono">E14</span><a href="#catalogues">Catalogues</a></td><td>No prior variable or binary classification; Gaia RUWE 1.27</td><td><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>Inconclusive</span></td></tr>
+        <tr><td><span class="mono">E15</span><a href="#fpp">False-positive probability</a></td><td>About 6%; nearby-star probability 0</td><td><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>Likely planet</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  <div class="callout"><p><strong>What would confirm it.</strong> A planet, a brown dwarf and the smallest stars are all about this size. Only a mass from radial-velocity spectra can tell them apart: a planet would move the star by about 126 m/s per Jupiter mass, a brown dwarf or small star by several km/s.</p></div>
+</section>
+
+<!-- ============================================================ DETECTION -->
+<section class="block" id="detection">
+  <h2>The signal</h2>
+  <p class="section-intro">The star dims by about 1% for two hours, every 3.4816 days, in every sector TESS has observed it.</p>
+
+  <article class="card ev" id="transit">
+    <div class="ev-head"><span class="ev-id">E1</span><h3>The folded transit</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Detected</span><a class="permalink" href="#transit">Copy link</a></div>
+    <p class="result">51,810 brightness measurements from six sectors, stacked on the 3.4816-day period. The dip is 0.97% deep and lasts 2.09 ± 0.05 hours.</p>
+    <p class="why">The fitted model is a planet-size body crossing near the edge of the star (impact parameter 0.87 ± 0.02), which is why the dip has sloping sides and a short flat bottom.</p>
+    <div id="chart-transit"></div>
+    <p class="caption">Blue points are 10-minute averages with their uncertainties; grey dots are a sample of individual 200-second measurements. Photometry is my own 3×3 pixel aperture on the full-frame images.</p>
+    <div class="files"><span class="files-label">Files</span><a href="data/folded_transit_binned.csv">folded_transit_binned.csv</a><a href="data/transit_model.csv">transit_model.csv</a><a href="data/lightcurve_own_photometry.csv">lightcurve_own_photometry.csv</a><a href="scripts/14_apertures.py">14_apertures.py</a><a href="scripts/06_fit.py">06_fit.py</a><a href="evidence/logs/fit_free_own.txt">fit_free_own.txt</a><a href="evidence/figures/06_independent_photometry.png">figure</a></div>
+  </article>
+
+  <article class="card ev" id="light-curves">
+    <div class="ev-head"><span class="ev-id">E2</span><h3>Transits in every sector</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Detected</span><a class="permalink" href="#light-curves">Copy link</a></div>
+    <p class="result">Each panel is one 27-day TESS sector. The dips line up with the predicted transit times (vertical lines) in all six, across three years.</p>
+    <div class="small-multiples" id="chart-sectors"></div>
+    <p class="caption">30-minute averages of the detrended light curve. Gaps are where TESS was downlinking data or the pipeline flagged the images.</p>
+    <div class="files"><span class="files-label">Files</span><a href="data/lightcurve_own_photometry.csv">lightcurve_own_photometry.csv</a><a href="data/lightcurve_pipeline.csv">lightcurve_pipeline.csv</a><a href="evidence/raw/">raw pipeline FITS files</a><a href="scripts/02_download.py">02_download.py</a><a href="evidence/figures/01_raw_lightcurves.png">figure</a></div>
+  </article>
+
+  <article class="card ev" id="period-search">
+    <div class="ev-head"><span class="ev-id">E3</span><h3>Period search</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Detected</span><a class="permalink" href="#period-search">Copy link</a></div>
+    <p class="result">A box-shaped-dip search of the 78 continuous days in sectors 102–104 finds one signal: 3.4816 days, at a signal-to-noise of 59.</p>
+    <p class="why">The smaller peaks are the same signal at multiples and fractions of the period, as expected for a real periodic dip.</p>
+    <div id="chart-bls"></div>
+    <div class="files"><span class="files-label">Files</span><a href="data/bls_periodogram.csv">bls_periodogram.csv</a><a href="scripts/04_search.py">04_search.py</a><a href="evidence/figures/02_bls.png">figure</a></div>
+  </article>
+</section>
+
+<!-- ============================================================ ON TARGET -->
+<section class="block" id="on-target">
+  <h2>Is the dip on this star?</h2>
+  <p class="section-intro">TESS pixels are 21″ wide, so a faint eclipsing binary nearby can imitate a planet on the bright star. These five tests ask where the dip comes from.</p>
+
+  <article class="card ev" id="centroid">
+    <div class="ev-head"><span class="ev-id">E4</span><h3>Difference images</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span><a class="permalink" href="#centroid">Copy link</a></div>
+    <p class="result">Subtracting in-transit images from out-of-transit images leaves a single point of lost light, on the target. Its centre is within about 1″ of the star in five of six sectors.</p>
+    <p class="why">Sector 102 is 7.8 ± 4.1″ off (1.9σ). There the wing of a bright star 263″ away crosses the corner of the image; its own "dip" is a single event, not periodic.</p>
+    <div class="cutouts" id="chart-cutouts"></div>
+    <div class="key"><span><i style="background:var(--s1)"></i>Light (left) and light lost in transit (right)</span><span><i style="background:var(--div-neg)"></i>Light gained in transit</span><span><i class="k-cross"></i>Catalogue position of the target</span><span><i class="k-ring"></i>Centre of the lost light</span></div>
+    <details class="tableview"><summary>Show offsets table</summary><div id="table-centroid"></div></details>
+    <div class="files"><span class="files-label">Files</span><a href="data/centroid_offsets.csv">centroid_offsets.csv</a><a href="data/difference_images.json">difference_images.json</a><a href="scripts/10_centroid.py">10_centroid.py</a><a href="scripts/11_s102_and_s1.py">11_s102_and_s1.py</a><a href="evidence/logs/10_centroid.txt">10_centroid.txt</a><a href="evidence/logs/11_sector102_and_sector1.txt">11_sector102…txt</a><a href="evidence/figures/04_centroid.png">figure</a></div>
+  </article>
+
+  <article class="card ev" id="neighbours">
+    <div class="ev-head"><span class="ev-id">E5</span><h3>Neighbouring stars</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span><a class="permalink" href="#neighbours">Copy link</a></div>
+    <div class="two">
+      <div>
+        <p class="result">Gaia DR3 lists no star within 22″. The nearest is about 1,400 times fainter in the TESS band and adds 0.07% to the target's light.</p>
+        <p class="why">Everything within 63″ adds up to 0.28% of the target's light. A star must supply at least 0.97% to cause a 0.97% dip, even if it vanished completely. No known neighbour can.</p>
+        <details class="tableview"><summary>Show neighbour table</summary><div id="table-neighbours"></div></details>
+      </div>
+      <div class="map-wrap"><div id="chart-neighbours"></div><p class="caption">Gaia sources within 150″. Dot size follows brightness. Rings mark 21″ (one TESS pixel) and 63″.</p></div>
+    </div>
+    <div class="files"><span class="files-label">Files</span><a href="data/gaia_neighbours.csv">gaia_neighbours.csv</a><a href="evidence/catalogues/gaia_neighbors.csv">gaia_neighbors.csv (all columns)</a><a href="evidence/catalogues/gaia_target.json">gaia_target.json</a><a href="scripts/05_gaia.py">05_gaia.py</a></div>
+  </article>
+
+  <article class="card ev" id="aperture">
+    <div class="ev-head"><span class="ev-id">E6</span><h3>Depth against aperture size</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span><a class="permalink" href="#aperture">Copy link</a></div>
+    <p class="result">The dip has the same fractional depth whether the light is summed over 4, 9 or 25 pixels: 9753 ± 121, 9784 ± 123 and 9752 ± 156 ppm.</p>
+    <p class="why">If the dip came from a neighbour, a wider aperture would take in more of that star and the dip would deepen.</p>
+    <div id="chart-aperture"></div>
+    <details class="tableview"><summary>Show data table</summary><div id="table-aperture"></div></details>
+    <div class="files"><span class="files-label">Files</span><a href="data/aperture_depths.csv">aperture_depths.csv</a><a href="scripts/14_apertures.py">14_apertures.py</a><a href="evidence/logs/14_apertures.txt">14_apertures.txt</a></div>
+  </article>
+
+  <article class="card ev" id="reduction">
+    <div class="ev-head"><span class="ev-id">E7</span><h3>Depth against reduction choices</h3><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>One anomaly</span><a class="permalink" href="#reduction">Copy link</a></div>
+    <p class="result">Changing the detrending window from 0.5 to 3 days moves the depth by about 1%. The official TESS-SPOC light curve and my own photometry agree to within a few percent.</p>
+    <p class="why">The QLP pipeline's light curves run about 10% shallow, and its small-aperture product is far shallower and changes from sector to sector (3100–7200 ppm). My own 2×2 pixel photometry does not show this, so it is probably a normalisation effect in that product. This has not been confirmed.</p>
+    <div id="table-reduction"></div>
+    <div class="files"><span class="files-label">Files</span><a href="data/depth_vs_reduction.csv">depth_vs_reduction.csv</a><a href="scripts/14_apertures.py">14_apertures.py</a><a href="evidence/logs/14_apertures.txt">14_apertures.txt</a></div>
+  </article>
+
+  <article class="card ev" id="density">
+    <div class="ev-head"><span class="ev-id">E8</span><h3>Stellar density from the transit shape</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span><a class="permalink" href="#density">Copy link</a></div>
+    <p class="result">The duration and shape of a transit measure the density of the star being crossed. With no prior knowledge of the star, the fit returns 0.61–0.73 times the Sun's density. Catalogues give 0.56–0.65 for this star.</p>
+    <p class="why">A dip on a smaller, hidden star would return a density several times higher.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th scope="col">Source</th><th scope="col" class="num">Density (Sun = 1)</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Transit shape, own photometry (6 sectors)</th><td class="num">0.73 (+0.10 / −0.08)</td></tr>
+        <tr><th scope="row">Transit shape, pipeline light curves (5 sectors)</th><td class="num">0.61 (+0.10 / −0.08)</td></tr>
+        <tr><th scope="row">TESS Input Catalog (1.14 M<sub>☉</sub>, 1.21 R<sub>☉</sub>)</th><td class="num">0.65</td></tr>
+        <tr><th scope="row">Gaia DR3 FLAME (1.05 M<sub>☉</sub>, 1.23 R<sub>☉</sub>)</th><td class="num">0.56</td></tr>
+      </tbody>
+    </table></div>
+    <div class="files"><span class="files-label">Files</span><a href="data/parameters.csv">parameters.csv</a><a href="scripts/06_fit.py">06_fit.py</a><a href="evidence/logs/fit_free_own.txt">fit_free_own.txt</a><a href="evidence/logs/fit_free.txt">fit_free.txt</a><a href="evidence/posteriors/">posterior samples</a></div>
+  </article>
+</section>
+
+<!-- ============================================================ BINARY -->
+<section class="block" id="binary">
+  <h2>Is it two stars eclipsing?</h2>
+  <p class="section-intro">An eclipsing pair of stars leaves fingerprints a planet does not: alternating eclipse depths, a second eclipse half an orbit later, and a star stretched by its partner's gravity.</p>
+
+  <article class="card ev" id="odd-even">
+    <div class="ev-head"><span class="ev-id">E9</span><h3>Odd against even transits</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span><a class="permalink" href="#odd-even">Copy link</a></div>
+    <p class="result">Odd-numbered transits are 9745 ± 170 ppm deep and even-numbered ones 9561 ± 173 ppm: 0.8σ apart.</p>
+    <p class="why">Two unequal stars at twice the period would give alternating deep and shallow eclipses.</p>
+    <div id="chart-oddeven"></div>
+    <details class="tableview"><summary>Show data table</summary><div id="table-oddeven"></div></details>
+    <div class="files"><span class="files-label">Files</span><a href="data/odd_even_binned.csv">odd_even_binned.csv</a><a href="scripts/17_own_checks.py">17_own_checks.py</a><a href="scripts/08_vet_lc.py">08_vet_lc.py</a><a href="evidence/logs/17_own_checks.txt">17_own_checks.txt</a><a href="evidence/logs/08_vet_lc.txt">08_vet_lc.txt</a><a href="evidence/figures/03_vetting_lc.png">figure</a></div>
+  </article>
+
+  <article class="card ev" id="secondary">
+    <div class="ev-head"><span class="ev-id">E10</span><h3>No secondary eclipse</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span><a class="permalink" href="#secondary">Copy link</a></div>
+    <p class="result">Half an orbit after the transit, the brightness changes by −196 ± 130 ppm: no eclipse. The 3σ upper limit is about 390 ppm.</p>
+    <p class="why">A companion star would be hidden behind the primary at that moment and its light would drop out. The limit rules out a companion that shines; it does not rule out a very cool one.</p>
+    <div id="chart-phase"></div>
+    <details class="tableview"><summary>Show data table</summary><div id="table-phase"></div></details>
+    <div class="files"><span class="files-label">Files</span><a href="data/full_orbit_binned.csv">full_orbit_binned.csv</a><a href="scripts/17_own_checks.py">17_own_checks.py</a><a href="evidence/logs/17_own_checks.txt">17_own_checks.txt</a></div>
+  </article>
+
+  <article class="card ev" id="ellipsoidal">
+    <div class="ev-head"><span class="ev-id">E11</span><h3>No tidal distortion: a mass limit</h3><span class="pill pill-info"><svg><use href="#i-info"/></svg>Mass limit</span><a class="permalink" href="#ellipsoidal">Copy link</a></div>
+    <p class="result">A massive companion stretches the star, which then brightens and fades twice per orbit. The measured amplitude is 5 ± 54 ppm. The 3σ limit of 167 ppm caps the companion at 0.083 solar masses, or 87 Jupiter masses.</p>
+    <p class="why">This excludes ordinary stellar companions. It does not separate a planet from a brown dwarf or from a star right at the bottom of the main sequence. The once-per-orbit terms are dominated by instrument systematics and were not used.</p>
+    <div class="files"><span class="files-label">Files</span><a href="scripts/09_phasecurve.py">09_phasecurve.py</a><a href="evidence/logs/09_phasecurve.txt">09_phasecurve.txt</a><a href="data/lightcurve_pipeline.csv">lightcurve_pipeline.csv</a></div>
+  </article>
+
+  <article class="card ev" id="timing">
+    <div class="ev-head"><span class="ev-id">E12</span><h3>Timing, and a prediction that held</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span><a class="permalink" href="#timing">Copy link</a></div>
+    <p class="result">The period was fitted on sectors 68–104 only. The six transits in sector 105, not used in that fit, arrive −0.7 ± 1.3 minutes from the predicted times.</p>
+    <p class="why">All 34 individually measured transits fit a constant period (χ² = 38.7 for 32 degrees of freedom). Sector 105 time stamps carry an extra systematic uncertainty of up to 1.5 minutes.</p>
+    <div id="chart-timing"></div>
+    <details class="tableview"><summary>Show data table</summary><div id="table-timing"></div></details>
+    <div class="files"><span class="files-label">Files</span><a href="data/transit_times.csv">transit_times.csv</a><a href="scripts/17_own_checks.py">17_own_checks.py</a><a href="scripts/14_apertures.py">14_apertures.py</a><a href="evidence/logs/17_own_checks.txt">17_own_checks.txt</a></div>
+  </article>
+
+  <article class="card ev" id="other-signals">
+    <div class="ev-head"><span class="ev-id">E13</span><h3>No other signals</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span><a class="permalink" href="#other-signals">Copy link</a></div>
+    <p class="result">With the transits masked, a second search finds no other periodic dip. The star shows no brightness variation at the orbital period or at half of it.</p>
+    <p class="why">A first pass flagged a 13.5-day signal. It consists of two events at the very start of data segments, where the pipeline light curve has ramps; with one day trimmed next to each gap, nothing remains above a detection statistic of 6. The official sector 68 light curve is flat to about 200 ppm.</p>
+    <div class="files"><span class="files-label">Files</span><a href="scripts/15_extra_signals.py">15_extra_signals.py</a><a href="evidence/logs/15_extra_signals.txt">15_extra_signals.txt</a><a href="evidence/figures/05_extra_signals.png">figure</a></div>
+  </article>
+
+  <article class="card ev" id="catalogues">
+    <div class="ev-head"><span class="ev-id">E14</span><h3>Catalogue checks</h3><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>Inconclusive</span><a class="permalink" href="#catalogues">Copy link</a></div>
+    <p class="result">The star has no entry in SIMBAD and is not a TESS Object of Interest. No variable-star or eclipsing-binary catalogue checked lists it. Gaia finds no orbital solution and no double image, but its astrometric quality number (RUWE) is 1.27, slightly above the value typical of single stars.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th scope="col">Catalogue</th><th scope="col">Search radius</th><th scope="col">Result</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">ExoFOP-TESS (TOIs and community candidates)</th><td>by TIC ID</td><td>No TOI, no CTOI</td></tr>
+        <tr><th scope="row">SIMBAD</th><td>10″</td><td>No object</td></tr>
+        <tr><th scope="row">AAVSO Variable Star Index</th><td>10″</td><td>No match</td></tr>
+        <tr><th scope="row">Gaia DR3 variability classes and eclipsing binaries</th><td>3″</td><td>No match</td></tr>
+        <tr><th scope="row">ASAS-SN variable stars</th><td>10″</td><td>No match</td></tr>
+        <tr><th scope="row">TESS eclipsing binaries (Prša et al. 2022)</th><td>10″</td><td>No match</td></tr>
+        <tr><th scope="row">Washington Double Star catalogue</th><td>10″</td><td>No match</td></tr>
+        <tr><th scope="row">RAVE DR6 and GALAH DR3 spectroscopy</th><td>3″</td><td>No spectra</td></tr>
+        <tr><th scope="row">Gaia DR3 non-single-star tables</th><td>by source ID</td><td>No solution</td></tr>
+        <tr><th scope="row">Gaia DR3 radial velocity</th><td>by source ID</td><td>−1.65 ± 1.12 km/s from 34 visits; weak constraint</td></tr>
+      </tbody>
+    </table></div>
+    <p class="caption">A search of every VizieR catalogue at once failed with server errors, so only the catalogues listed were checked.</p>
+    <div class="files"><span class="files-label">Files</span><a href="evidence/catalogues/crossmatch_results.csv">crossmatch_results.csv</a><a href="evidence/catalogues/gaia_target.json">gaia_target.json</a><a href="evidence/catalogues/exofop_target.json">exofop_target.json</a><a href="scripts/16_catalogues.py">16_catalogues.py</a><a href="scripts/05_gaia.py">05_gaia.py</a></div>
+  </article>
+</section>
+
+<!-- ============================================================ FPP -->
+<section class="block" id="statistics">
+  <h2>How likely is a false positive?</h2>
+  <p class="section-intro">TRICERATOPS compares how well a planet and each false-positive scenario explain the light curve, weighted by how common each is.</p>
+
+  <article class="card ev" id="fpp">
+    <div class="ev-head"><span class="ev-id">E15</span><h3>False-positive probability</h3><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>Likely planet</span><a class="permalink" href="#fpp">Copy link</a></div>
+    <p class="result">The false-positive probability is about 6% (median 0.057 on both light curves). The probability that a known neighbouring star is responsible is 0.</p>
+    <p class="why">Statistical validation needs a false-positive probability below 1.5%. This candidate falls in the "likely planet" class. All of the remaining false-positive weight sits in scenarios with an unseen companion star bound to the target, which high-resolution imaging would test. TRICERATOPS does not model brown dwarfs.</p>
+    <h4>Scenario probabilities</h4>
+    <div id="chart-scenarios"></div>
+    <p class="caption">Mean of six runs of 10 million samples each on my own photometry. The pipeline light curve gives the same ranking.</p>
+    <h4>Run-to-run spread</h4>
+    <div id="chart-fpp"></div>
+    <p class="caption">Each dot is one run. Runs with 1 million samples scattered from 0.005 to 0.47 and were discarded as not converged; they are in the data file.</p>
+    <details class="tableview"><summary>Show data table</summary><div id="table-fpp"></div></details>
+    <div class="files"><span class="files-label">Files</span><a href="data/triceratops_runs.csv">triceratops_runs.csv</a><a href="data/triceratops_scenarios.csv">triceratops_scenarios.csv</a><a href="evidence/catalogues/triceratops_probs_own1e7.csv">best-fit scenarios</a><a href="scripts/13_triceratops.py">13_triceratops.py</a><a href="scripts/12_prep_tri.py">12_prep_tri.py</a><a href="evidence/logs/triceratops_mission.txt">triceratops_mission.txt</a></div>
+  </article>
+</section>
+
+<!-- ============================================================ PARAMETERS -->
+<section class="block" id="parameters">
+  <h2>Parameters</h2>
+  <p class="section-intro">Two independent reductions were fitted with a circular orbit and the stellar density left free. The own-photometry column is preferred because the QLP pipeline light curves run about 10% shallow.</p>
+  <div class="card">
+    <h3>Candidate</h3>
+    <div id="table-params" style="margin-top:10px"></div>
+    <p class="caption">BTJD = BJD<sub>TDB</sub> − 2457000. Derived: orbital distance about 0.047 au; equilibrium temperature about 1420–1460 K for zero albedo. Radius assumes a stellar radius of 1.21 ± 0.06 R<sub>☉</sub>.</p>
+    <div class="files"><span class="files-label">Files</span><a href="data/parameters.csv">parameters.csv</a><a href="evidence/posteriors/">posterior samples</a><a href="scripts/06_fit.py">06_fit.py</a></div>
+  </div>
+  <div class="card">
+    <h3>Host star</h3>
+    <div class="table-wrap" style="margin-top:10px"><table>
+      <thead><tr><th scope="col">Quantity</th><th scope="col">Value</th><th scope="col">Source</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Identifiers</th><td>TIC 219329329 · Gaia DR3 6507925182103208960 · 2MASS J22212387−5550147</td><td>TIC 8.2</td></tr>
+        <tr><th scope="row">Position (J2000)</th><td>RA 335.34958°, Dec −55.83744°</td><td>Gaia DR3</td></tr>
+        <tr><th scope="row">Brightness</th><td>T = 12.41, G = 12.79, V ≈ 12.9</td><td>TIC 8.2, Gaia DR3</td></tr>
+        <tr><th scope="row">Effective temperature</th><td>5920–6090 K</td><td>Gaia GSP-Phot, TIC 8.2</td></tr>
+        <tr><th scope="row">Radius</th><td>1.21 ± 0.06 R<sub>☉</sub></td><td>TIC 8.2 (Gaia FLAME: 1.23)</td></tr>
+        <tr><th scope="row">Mass</th><td>1.05–1.14 M<sub>☉</sub></td><td>Gaia FLAME, TIC 8.2</td></tr>
+        <tr><th scope="row">Distance</th><td>552 pc (parallax 1.811 ± 0.018 mas)</td><td>Gaia DR3</td></tr>
+        <tr><th scope="row">RUWE</th><td>1.27</td><td>Gaia DR3</td></tr>
+      </tbody>
+    </table></div>
+    <div class="files"><span class="files-label">Files</span><a href="evidence/catalogues/gaia_target.json">gaia_target.json</a><a href="evidence/catalogues/exofop_target.json">exofop_target.json</a></div>
+  </div>
+</section>
+
+<!-- ============================================================ OPEN ISSUES -->
+<section class="block" id="open-issues">
+  <h2>What is not settled</h2>
+  <div class="card">
+    <ul class="plain">
+      <li><strong>No mass.</strong> There are no spectra, so a brown dwarf or a star at the very bottom of the main sequence is not excluded.</li>
+      <li><strong>No high-resolution imaging.</strong> A close companion star cannot be ruled out, and Gaia's RUWE of 1.27 is mildly elevated.</li>
+      <li><strong>One band only.</strong> All photometry is from TESS. There is no ground-based or multi-colour transit.</li>
+      <li><strong>QLP small-aperture anomaly.</strong> One pipeline product gives a much shallower, sector-dependent depth (<a href="#reduction">E7</a>). Direct photometry does not reproduce it, but the cause was not confirmed.</li>
+      <li><strong>Sector 102 centroid.</strong> The offset there is 1.9σ (<a href="#centroid">E4</a>).</li>
+      <li><strong>Sector 1 has no data.</strong> In 2018 the star fell in the gap between two detectors, so the baseline starts in 2023.</li>
+      <li><strong>Sector 105 time stamps.</strong> They use the detector-centre barycentric correction and can be off by up to 1.5 minutes.</li>
+      <li><strong>Catalogue search is partial.</strong> The all-catalogue VizieR query failed (<a href="#catalogues">E14</a>).</li>
+      <li><strong>Not peer reviewed.</strong> This is an independent analysis of public data.</li>
+    </ul>
+  </div>
+
+  <div class="card" id="follow-up">
+    <h3>Follow-up that would settle it</h3>
+    <ol class="steps" style="margin-top:14px">
+      <li>Two or three spectra near the orbit's quarter phases. A brown dwarf or small star would show several km/s; a planet about 126 m/s per Jupiter mass.</li>
+      <li>High-resolution imaging (speckle or adaptive optics) to look for close companions. This would also lower the false-positive probability.</li>
+      <li>A ground-based transit in a second colour. The event is 1% deep and lasts 2.1 hours.</li>
+      <li>Registration as a community candidate (CTOI) on ExoFOP so follow-up groups can pick it up.</li>
+    </ol>
+    <h4>Next transits</h4>
+    <div id="table-next"></div>
+    <p class="caption">Mid-transit times from T<sub>0</sub> = BJD<sub>TDB</sub> 2461156.74624 ± 0.00039 and P = 3.481584 ± 0.000003 d. The UTC column ignores the light-travel correction and can be off by up to 8 minutes; use the BJD column for scheduling.</p>
+  </div>
+</section>
+
+<!-- ============================================================ FILES -->
+<section class="block" id="files">
+  <h2>Every file</h2>
+  <p class="section-intro">All data products, logs, figures and scripts behind this page. Every row is a direct link.</p>
+  <div class="card"><div id="table-files"></div></div>
+
+  <div class="card" id="sources">
+    <h3>Original data, not stored here</h3>
+    <p class="caption" style="margin:6px 0 12px">The pixel data are too large to host on this page. These links return exactly the files used.</p>
+    <div id="table-sources"></div>
+    <h4>Software</h4>
+    <p class="caption" style="margin-top:0"><a href="https://github.com/stevengiacalone/triceratops">TRICERATOPS</a> 1.1.0 · <a href="https://github.com/lightkurve/lightkurve">lightkurve</a> · <a href="https://www.astropy.org">astropy</a> and <a href="https://astroquery.readthedocs.io">astroquery</a> · <a href="https://github.com/lkreidberg/batman">batman</a> · <a href="https://github.com/dfm/emcee">emcee</a> · <a href="https://github.com/hippke/wotan">wotan</a></p>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>This page uses data collected by the TESS mission, obtained from the MAST archive at the Space Telescope Science Institute, and data from the European Space Agency mission Gaia. Light curves from the TESS-SPOC and QLP pipelines were used alongside independent photometry.</p>
+    <p>Independent analysis, prepared with AI assistance (Claude). Not peer reviewed. Generated 10 November 2026.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/files.js"></script>
+<script src="assets/chart.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

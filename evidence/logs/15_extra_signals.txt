@@ -1,0 +1,23 @@
+points after masking the candidate: 41176 (of 42709)
+BLS on residuals, S102-104 (78 d contiguous):
+   P= 13.5107 d  SDE=  9.3  depth= 5206 ppm  depth S/N=22.5  dur=4.3 h  (P/Pcand=3.881)
+   P= 33.2694 d  SDE=  5.7  depth= 6114 ppm  depth S/N=21.0  dur=4.3 h  (P/Pcand=9.556)
+   P= 20.6698 d  SDE=  5.4  depth= 3192 ppm  depth S/N=16.1  dur=4.3 h  (P/Pcand=5.937)
+   P=  2.7211 d  SDE=  5.2  depth=  624 ppm  depth S/N=10.3  dur=4.3 h  (P/Pcand=0.782)
+   P= 36.8891 d  SDE=  5.0  depth= 6901 ppm  depth S/N=19.7  dur=2.9 h  (P/Pcand=10.595)
+BLS on residuals, S68:
+   P=  0.5655 d  SDE=  4.9  depth=  356 ppm  depth S/N= 4.7  dur=2.9 h  (P/Pcand=0.162)
+   P=  0.6212 d  SDE=  4.5  depth=  512 ppm  depth S/N= 4.5  dur=1.2 h  (P/Pcand=0.178)
+   P=  1.1114 d  SDE=  4.5  depth=  909 ppm  depth S/N= 4.8  dur=0.7 h  (P/Pcand=0.319)
+   P=  0.4073 d  SDE=  4.3  depth=  339 ppm  depth S/N= 4.3  dur=1.9 h  (P/Pcand=0.117)
+   P=  1.2431 d  SDE=  4.2  depth=  951 ppm  depth S/N= 4.7  dur=0.7 h  (P/Pcand=0.357)
+   sensitivity S102-104: 7.1-sigma depth for P= 1.0 d, 2-h duration ~ 384 ppm (~2.6 R_earth)
+   sensitivity S102-104: 7.1-sigma depth for P= 5.0 d, 2-h duration ~ 858 ppm (~3.9 R_earth)
+   sensitivity S102-104: 7.1-sigma depth for P=10.0 d, 2-h duration ~ 1214 ppm (~4.6 R_earth)
+   sensitivity S102-104: 7.1-sigma depth for P=20.0 d, 2-h duration ~ 1716 ppm (~5.5 R_earth)
+--- stellar variability (un-flattened light curves, candidate transits masked) ---
+   S68: strongest LS peak P=0.045 d (f=22.174 /d), semi-amp ~204 ppm, FAP=8.5e-01 ; point rms 2986 ppm, 30-min binned rms 1001 ppm ; power at Porb: 0.0001, at Porb/2: 0.0007 (peak 0.0025)
+   S95: strongest LS peak P=6.059 d (f=0.165 /d), semi-amp ~716 ppm, FAP=2.2e-43 ; point rms 2913 ppm, 30-min binned rms 1414 ppm ; power at Porb: 0.0020, at Porb/2: 0.0046 (peak 0.0305)
+   S102: strongest LS peak P=8.279 d (f=0.121 /d), semi-amp ~618 ppm, FAP=3.2e-37 ; point rms 2674 ppm, 30-min binned rms 1110 ppm ; power at Porb: 0.0010, at Porb/2: 0.0022 (peak 0.0272)
+   S103: strongest LS peak P=5.767 d (f=0.173 /d), semi-amp ~714 ppm, FAP=4.0e-58 ; point rms 2588 ppm, 30-min binned rms 1132 ppm ; power at Porb: 0.0061, at Porb/2: 0.0014 (peak 0.0393)
+   S104: strongest LS peak P=13.000 d (f=0.077 /d), semi-amp ~826 ppm, FAP=2.6e-88 ; point rms 2574 ppm, 30-min binned rms 1164 ppm ; power at Porb: 0.0090, at Porb/2: 0.0005 (peak 0.0524)

@@ -1,0 +1,33 @@
+template mid-transit depth 8692 ppm ; mean depth over the in-transit window = 0.881 x mid depth
+=== A. depth vs aperture, own photometry on FFI cutouts (sky = per-frame median of faint pixels; pipeline-good cadences only) ===
+S68 (9355 of 10341 frames):  2x2 core 9823±279 (net 1140 e/s)  3x3 9779±296 (net 1360 e/s)  5x5 10108±379 (net 1643 e/s)
+S95 (8787 of 9846 frames):  2x2 core 9779±270 (net 1204 e/s)  3x3 9894±302 (net 1387 e/s)  5x5 10166±404 (net 1638 e/s)
+S102 (8501 of 9805 frames):  2x2 core 9247±320 (net 1098 e/s)  3x3 9354±301 (net 1490 e/s)  5x5 9449±417 (net 1724 e/s)
+S103 (8801 of 9912 frames):  2x2 core 10592±300 (net 1067 e/s)  3x3 9952±288 (net 1360 e/s)  5x5 9701±366 (net 1668 e/s)
+S104 (8525 of 10465 frames):  2x2 core 9629±310 (net 947 e/s)  3x3 10081±301 (net 1273 e/s)  5x5 9476±350 (net 1665 e/s)
+S105 (9860 of 9860 frames):  2x2 core 9345±306 (net 1150 e/s)  3x3 9613±316 (net 1348 e/s)  5x5 9657±392 (net 1639 e/s)
+weighted means over 6 sectors:
+   2x2 core   9753 ± 121 ppm  chi2=12.3/5
+   3x3        9784 ± 123 ppm  chi2=3.8/5
+   5x5        9752 ± 156 ppm  chi2=3.2/5
+=== B. sector 105 (not used in the fit): transit times vs prediction ===
+   epoch +21  BTJD 4208.9694  O-C = -1.5 ± 3.2 min   depth = 9424 ± 775 ppm
+   epoch +22  BTJD 4212.4511  O-C = -1.3 ± 3.1 min   depth = 9749 ± 775 ppm
+   epoch +23  BTJD 4215.9379  O-C = +6.2 ± 2.9 min   depth = 10367 ± 775 ppm
+   epoch +25  BTJD 4222.8962  O-C = -0.8 ± 3.4 min   depth = 8979 ± 775 ppm
+   epoch +26  BTJD 4226.3764  O-C = -2.8 ± 3.3 min   depth = 9302 ± 775 ppm
+   epoch +27  BTJD 4229.8564  O-C = -5.1 ± 3.0 min   depth = 10089 ± 775 ppm
+   S105 mean O-C = -0.7 ± 1.3 min (N=6)
+=== C. depth vs detrending / pipeline (mission light curves) ===
+   SPOC S68 + QLP SAP, biweight 0.5 d           8692 ± 110 ppm   per sector: 9254 8587 8605 8690 8439
+   SPOC S68 + QLP SAP, biweight 1.0 d           8715 ± 111 ppm   per sector: 9365 8547 8665 8747 8378
+   SPOC S68 + QLP SAP, biweight 2.0 d           8739 ± 112 ppm   per sector: 9415 8695 8754 8637 8345
+   SPOC S68 + QLP SAP, biweight 3.0 d           8777 ± 113 ppm   per sector: 9429 8796 8889 8705 8235
+   QLP SAP only (incl. S68)                     8673 ± 115 ppm   per sector: 9344 8547 8665 8747 8378
+   QLP DET_FLUX (pipeline detrended)            7984 ± 114 ppm   per sector: 8179 8330 7645 7629 8210
+   SPOC S68 SAP                                 9630 ± 274 ppm   per sector: 9630
+   SPOC S68 PDCSAP                              9365 ± 268 ppm   per sector: 9365
+   QLP DET_FLUX_SML                             4681 ± 98 ppm   per sector: 7186 3540 5336 3103 6245
+   QLP DET_FLUX_LAG                             8708 ± 157 ppm   per sector: 8559 8673 8661 8483 9083
+   SPOC S68 pixel file, own 3x3 aperture        9707 ± 297 ppm
+   SPOC S68 pixel file, own 5x5 aperture        10030 ± 402 ppm

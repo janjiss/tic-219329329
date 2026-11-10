@@ -1,0 +1,31 @@
+light_curve,scenario,mean_probability
+"Pipeline light curve, 10^7 samples",TP,0.72813
+"Pipeline light curve, 10^7 samples",PTP,0.19066
+"Pipeline light curve, 10^7 samples",PEB,0.04436
+"Pipeline light curve, 10^7 samples",STP,0.02435
+"Pipeline light curve, 10^7 samples",SEB,0.00922
+"Pipeline light curve, 10^7 samples",DTP,0.00159
+"Pipeline light curve, 10^7 samples",EBx2P,0.00086
+"Pipeline light curve, 10^7 samples",EB,0.00055
+"Pipeline light curve, 10^7 samples",PEBx2P,0.00019
+"Pipeline light curve, 10^7 samples",BTP,4e-05
+"Pipeline light curve, 10^7 samples",BEB,3e-05
+"Pipeline light curve, 10^7 samples",DEB,1e-05
+"Pipeline light curve, 10^7 samples",SEBx2P,0.0
+"Pipeline light curve, 10^7 samples",DEBx2P,0.0
+"Pipeline light curve, 10^7 samples",BEBx2P,0.0
+"Own photometry, 10^7 samples",TP,0.76796
+"Own photometry, 10^7 samples",PTP,0.17334
+"Own photometry, 10^7 samples",PEB,0.03788
+"Own photometry, 10^7 samples",STP,0.01694
+"Own photometry, 10^7 samples",DTP,0.00178
+"Own photometry, 10^7 samples",SEB,0.00092
+"Own photometry, 10^7 samples",BTP,0.00058
+"Own photometry, 10^7 samples",EB,0.00034
+"Own photometry, 10^7 samples",EBx2P,0.00017
+"Own photometry, 10^7 samples",PEBx2P,5e-05
+"Own photometry, 10^7 samples",BEB,2e-05
+"Own photometry, 10^7 samples",DEB,1e-05
+"Own photometry, 10^7 samples",SEBx2P,0.0
+"Own photometry, 10^7 samples",DEBx2P,0.0
+"Own photometry, 10^7 samples",BEBx2P,0.0

@@ -1,0 +1,17 @@
+catalogue,description,search_radius,result,service
+ExoFOP-TESS,TOIs and community candidates (CTOIs),by TIC ID,"no TOI, no CTOI",exofop.ipac.caltech.edu
+SIMBAD,object lookup,10 arcsec,no object,simbad.harvard.edu mirror
+B/vsx/vsx,AAVSO Variable Star Index,10 arcsec,no match,vizier.cfa.harvard.edu mirror
+I/358/vclassre,Gaia DR3 variability classification,3 arcsec,no match,vizier.cfa.harvard.edu mirror
+I/358/veb,Gaia DR3 eclipsing binaries,3 arcsec,no match,vizier.cfa.harvard.edu mirror
+II/366/catalog,ASAS-SN variable stars,10 arcsec,no match,vizier.cfa.harvard.edu mirror
+J/ApJS/258/16,TESS eclipsing binaries (Prsa+ 2022),10 arcsec,no match,vizier.cfa.harvard.edu mirror
+B/wds/wds,Washington Double Star catalogue,10 arcsec,no match,vizier.cfa.harvard.edu mirror
+III/283/ravedr6,RAVE DR6 spectroscopy,3 arcsec,no match,vizier.cfa.harvard.edu mirror
+J/MNRAS/506/150,GALAH DR3 spectroscopy,3 arcsec,no match,vizier.cfa.harvard.edu mirror
+IX/47/2rxs,ROSAT 2RXS X-ray sources,40 arcsec,no match,vizier.cfa.harvard.edu mirror
+II/335/galex_ais,GALEX ultraviolet sources,4 arcsec,no match,vizier.cfa.harvard.edu mirror
+J/ApJS/254/39,TESS Objects of Interest (Guerrero+ 2021),10 arcsec,no match,vizier.cfa.harvard.edu mirror
+IV/39/tic82,TESS Input Catalog 8.2,3 arcsec,1 row (the target),vizier.cfa.harvard.edu mirror
+gaiadr3.nss_*,Gaia DR3 non-single-star tables,by source ID,0 rows,gea.esac.esa.int
+VizieR (all catalogues),positional search of every catalogue,3 arcsec,"FAILED: server errors, not completed",vizier.cfa.harvard.edu mirror

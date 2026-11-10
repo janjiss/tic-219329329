@@ -1,0 +1,44 @@
+[
+ {
+  "product": "hlsp_tess-spoc_tess_phot_0000000219329329-s0068_tess_v1_lc.fits",
+  "uri": "mast:HLSP/tess-spoc/s0068/target/0000/0002/1932/9329/hlsp_tess-spoc_tess_phot_0000000219329329-s0068_tess_v1_lc.fits",
+  "mission": "TESS Sector 68",
+  "author": "TESS-SPOC"
+ },
+ {
+  "product": "hlsp_qlp_tess_ffi_s0068-0000000219329329_tess_v01_llc.fits",
+  "uri": "mast:HLSP/qlp/s0068/0000/0002/1932/9329/hlsp_qlp_tess_ffi_s0068-0000000219329329_tess_v01_llc.fits",
+  "mission": "TESS Sector 68",
+  "author": "QLP"
+ },
+ {
+  "product": "hlsp_qlp_tess_ffi_s0095-0000000219329329_tess_v01_llc.fits",
+  "uri": "mast:HLSP/qlp/s0095/0000/0002/1932/9329/hlsp_qlp_tess_ffi_s0095-0000000219329329_tess_v01_llc.fits",
+  "mission": "TESS Sector 95",
+  "author": "QLP"
+ },
+ {
+  "product": "hlsp_qlp_tess_ffi_s0102-0000000219329329_tess_v01_llc.fits",
+  "uri": "mast:HLSP/qlp/s0102/0000/0002/1932/9329/hlsp_qlp_tess_ffi_s0102-0000000219329329_tess_v01_llc.fits",
+  "mission": "TESS Sector 102",
+  "author": "QLP"
+ },
+ {
+  "product": "hlsp_qlp_tess_ffi_s0103-0000000219329329_tess_v01_llc.fits",
+  "uri": "mast:HLSP/qlp/s0103/0000/0002/1932/9329/hlsp_qlp_tess_ffi_s0103-0000000219329329_tess_v01_llc.fits",
+  "mission": "TESS Sector 103",
+  "author": "QLP"
+ },
+ {
+  "product": "hlsp_qlp_tess_ffi_s0104-0000000219329329_tess_v01_llc.fits",
+  "uri": "mast:HLSP/qlp/s0104/0000/0002/1932/9329/hlsp_qlp_tess_ffi_s0104-0000000219329329_tess_v01_llc.fits",
+  "mission": "TESS Sector 104",
+  "author": "QLP"
+ },
+ {
+  "product": "hlsp_tess-spoc_tess_phot_0000000219329329-s0068_tess_v1_tp.fits",
+  "uri": "mast:HLSP/tess-spoc/s0068/target/0000/0002/1932/9329/hlsp_tess-spoc_tess_phot_0000000219329329-s0068_tess_v1_tp.fits",
+  "mission": "TESS Sector 68",
+  "author": "TESS-SPOC"
+ }
+]
