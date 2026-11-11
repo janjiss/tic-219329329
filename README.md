@@ -2,7 +2,7 @@
 
 A static website that presents the vetting evidence for a planet candidate found in public TESS data.
 
-**Status: likely planet, not validated.** The transit is real and on the target star, and it passes every false-positive test run so far. The TRICERATOPS false-positive probability is about 6% (validation needs under 1.5%), and the companion's mass has not been measured.
+**Status: likely planet, not validated.** The transit is real and on the target star, and it passes every false-positive test run so far. The TRICERATOPS false-positive probability is about 6% from the transit alone and about 3–4% with whole-orbit limits added (validation needs under 1.5%), and the companion's mass has not been measured.
 
 Independent analysis of public data, prepared with AI assistance. Not peer reviewed.
 
@@ -46,8 +46,11 @@ Then open `http://localhost:8765`.
 | E13 | `#other-signals` | No other signals |
 | E14 | `#catalogues` | Catalogue checks |
 | E15 | `#fpp` | False-positive probability |
+| E16 | `#asassn` | Independent detection in ASAS-SN ground-based photometry |
+| E17 | `#fpp-phase` | False-positive probability with whole-orbit limits |
+| E18 | `#archival-spectra` | Archival spectra search |
 
-Other anchors: `#summary`, `#parameters`, `#open-issues`, `#follow-up`, `#files`, `#sources`.
+Other anchors: `#summary`, `#further-checks`, `#parameters`, `#open-issues`, `#follow-up`, `#files`, `#sources`.
 
 ## Regenerating the data
 
@@ -61,4 +64,4 @@ Each script lists its arguments at the top or takes the folders as positional ar
 
 ## Data credits
 
-TESS mission data from the MAST archive (TESS-SPOC and QLP light curves, TESScut full-frame cutouts). Gaia DR3 from the ESA Gaia archive. Software: TRICERATOPS, lightkurve, astropy, astroquery, batman, emcee, wotan.
+TESS mission data from the MAST archive (TESS-SPOC and QLP light curves, TESScut full-frame cutouts). Gaia DR3 from the ESA Gaia archive. ASAS-SN Sky Patrol ground-based photometry. Software: TRICERATOPS, lightkurve, astropy, astroquery, batman, emcee, wotan.

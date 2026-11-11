@@ -1,0 +1,9 @@
+archive,search,result,service
+"ESO Science Archive, reduced products",30 arcsec box,no spectra; only VISTA VHS near-infrared images and catalogue entries,archive.eso.org/tap_obs (ivoa.ObsCore)
+"ESO Science Archive, raw frames",30 arcsec box,none from any instrument,archive.eso.org/tap_obs (dbo.raw)
+GALAH DR4,"Gaia DR3 source ID, and 10 arcsec box",no match; no GALAH DR4 star within 1 degree,datacentral.org.au/vo/tap (galah_dr4.mainstartable)
+GALAH DR3,3 arcsec,no match,VizieR J/MNRAS/506/150
+APOGEE DR17,"5 arcsec, and 1 degree",no match; field not observed,VizieR III/286 and SDSS SkyServer DR17 (apogeeStar)
+"SDSS-V DR19 Milky Way Mapper, APOGEE and BOSS",5 arcsec box,"no spectra; star is in the targeting database only (ops_std_boss, ops_gaia_brightneighbors)","SDSS SkyServer DR19 (mwm_apogee_allvisit, mwm_boss_allvisit, apogee_drp_allvisit, mos_target)"
+RAVE DR6,3 arcsec,no match,VizieR III/283
+Gaia DR3 radial velocity,by source ID,"-1.65 +/- 1.12 km/s from 34 visits, stacked cross-correlation; weak constraint",gea.esac.esa.int

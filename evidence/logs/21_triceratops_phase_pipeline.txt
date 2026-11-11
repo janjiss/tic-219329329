@@ -1,0 +1,29 @@
+run  1: FPP=0.03079 NFPP=0.0e+00 (79 s) | TP=0.7689  PTP=0.1991  STP=0.0289  DTP=0.0012  EBx2P=0.0011  PEB=0.0006
+run  2: FPP=0.06368 NFPP=0.0e+00 (78 s) | TP=0.7081  PTP=0.2270  STP=0.0609  PEB=0.0016  DTP=0.0012  EBx2P=0.0010
+run  3: FPP=0.05533 NFPP=0.0e+00 (77 s) | TP=0.6236  PTP=0.3194  STP=0.0517  PEB=0.0017  DTP=0.0016  EBx2P=0.0015
+run  4: FPP=0.02155 NFPP=0.0e+00 (78 s) | TP=0.7392  PTP=0.2379  STP=0.0176  PEB=0.0023  DTP=0.0014  EBx2P=0.0010  SEB=0.0005
+run  5: FPP=0.01664 NFPP=0.0e+00 (77 s) | TP=0.8396  PTP=0.1424  STP=0.0120  PEB=0.0018  SEB=0.0014  DTP=0.0013  EBx2P=0.0009
+run  6: FPP=0.09113 NFPP=0.0e+00 (76 s) | TP=0.7174  PTP=0.1898  STP=0.0877  PEB=0.0019  DTP=0.0018  EBx2P=0.0012
+mean scenario probabilities over runs:
+TP        0.73280
+PTP       0.21925
+STP       0.04314
+PEB       0.00166
+DTP       0.00143
+EBx2P     0.00112
+SEB       0.00033
+PEBx2P    0.00020
+BTP       0.00005
+SEBx2P    0.00001
+DEBx2P    0.00000
+BEB       0.00000
+EB        0.00000
+DEB       0.00000
+BEBx2P    0.00000
+effect of the extra terms per eclipsing-binary scenario (likelihood-weighted):
+   TEB  evidence multiplied by 0.00362 ; typical predicted secondary depth 537 ppm ; ellipsoidal 160 ppm
+   PEB  evidence multiplied by 0.0332 ; typical predicted secondary depth 401 ppm ; ellipsoidal 109 ppm
+   SEB  evidence multiplied by 0.0311 ; typical predicted secondary depth 556 ppm ; ellipsoidal 95 ppm
+   DEB  evidence multiplied by 0.0135 ; typical predicted secondary depth 503 ppm ; ellipsoidal 123 ppm
+   BEB  evidence multiplied by 0.0603 ; typical predicted secondary depth 574 ppm ; ellipsoidal 34 ppm
+median FPP = 0.04306 ; 16-84% = 0.02056 - 0.06917 ; mean = 0.04652 +/- 0.02622 ; NFPP = 0.0e+00

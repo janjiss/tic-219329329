@@ -29,3 +29,33 @@ light_curve,scenario,mean_probability
 "Own photometry, 10^7 samples",SEBx2P,0.0
 "Own photometry, 10^7 samples",DEBx2P,0.0
 "Own photometry, 10^7 samples",BEBx2P,0.0
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",TP,0.7328
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",PTP,0.21925
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",STP,0.04314
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",PEB,0.00166
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",DTP,0.00143
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",EBx2P,0.00112
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",SEB,0.00033
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",PEBx2P,0.0002
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",BTP,5e-05
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",SEBx2P,1e-05
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",DEBx2P,0.0
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",BEB,0.0
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",EB,0.0
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",DEB,0.0
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",BEBx2P,0.0
+"Own photometry, 10^7 samples, with whole-orbit limits",TP,0.754
+"Own photometry, 10^7 samples, with whole-orbit limits",PTP,0.21588
+"Own photometry, 10^7 samples, with whole-orbit limits",STP,0.02552
+"Own photometry, 10^7 samples, with whole-orbit limits",DTP,0.00218
+"Own photometry, 10^7 samples, with whole-orbit limits",PEB,0.00151
+"Own photometry, 10^7 samples, with whole-orbit limits",BTP,0.00031
+"Own photometry, 10^7 samples, with whole-orbit limits",SEB,0.0003
+"Own photometry, 10^7 samples, with whole-orbit limits",EBx2P,0.00021
+"Own photometry, 10^7 samples, with whole-orbit limits",PEBx2P,6e-05
+"Own photometry, 10^7 samples, with whole-orbit limits",BEB,1e-05
+"Own photometry, 10^7 samples, with whole-orbit limits",DEB,0.0
+"Own photometry, 10^7 samples, with whole-orbit limits",SEBx2P,0.0
+"Own photometry, 10^7 samples, with whole-orbit limits",EB,0.0
+"Own photometry, 10^7 samples, with whole-orbit limits",DEBx2P,0.0
+"Own photometry, 10^7 samples, with whole-orbit limits",BEBx2P,0.0

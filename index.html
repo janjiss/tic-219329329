@@ -36,6 +36,7 @@
       <a href="#on-target">On target?</a>
       <a href="#binary">Binary?</a>
       <a href="#fpp">Statistics</a>
+      <a href="#further-checks">New checks</a>
       <a href="#parameters">Parameters</a>
       <a href="#open-issues">Open issues</a>
       <a href="#files">Files</a>
@@ -71,14 +72,14 @@
     <li class="tile"><div class="tile-label">Orbital period</div><div class="tile-value">3.4816 <small>days</small></div><div class="tile-note">known to ±0.3 seconds</div></li>
     <li class="tile"><div class="tile-label">Transit depth</div><div class="tile-value">0.97<small>%</small></div><div class="tile-note">of the star's light, for 2.1 hours</div></li>
     <li class="tile"><div class="tile-label">Radius</div><div class="tile-value">1.24 <small>R<sub>Jup</sub></small></div><div class="tile-note">± 0.07</div></li>
-    <li class="tile"><div class="tile-label">False-positive probability</div><div class="tile-value">≈ 6<small>%</small></div><div class="tile-note">validation needs under 1.5%</div></li>
+    <li class="tile"><div class="tile-label">False-positive probability</div><div class="tile-value">≈ 3–4<small>%</small></div><div class="tile-note">6% from the transit alone; validation needs under 1.5%</div></li>
     <li class="tile"><div class="tile-label">Mass</div><div class="tile-value">&lt; 87 <small>M<sub>Jup</sub></small></div><div class="tile-note">3σ upper limit, not a measurement</div></li>
   </ul>
 </section>
 
 <section class="block" id="summary">
   <h2>The evidence at a glance</h2>
-  <p class="section-intro">Fifteen pieces of evidence, each with its own link, data files and analysis script. All of it comes from public TESS full-frame images (sectors 68, 95, 102, 103, 104 and 105) and the Gaia DR3 catalogue.</p>
+  <p class="section-intro">Eighteen pieces of evidence, each with its own link, data files and analysis script. All of it comes from public data: TESS full-frame images (sectors 68, 95, 102, 103, 104 and 105), the Gaia DR3 catalogue and ASAS-SN ground-based photometry. E16–E18 were added on 11 November 2026.</p>
   <div class="card">
     <div class="table-wrap">
     <table class="glance">
@@ -98,7 +99,10 @@
         <tr><td><span class="mono">E12</span><a href="#timing">Timing and prediction</a></td><td>Held-out sector arrives −0.7 ± 1.3 min from prediction</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span></td></tr>
         <tr><td><span class="mono">E13</span><a href="#other-signals">Other signals</a></td><td>No other periodic dips; no variability at the orbital period</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Pass</span></td></tr>
         <tr><td><span class="mono">E14</span><a href="#catalogues">Catalogues</a></td><td>No prior variable or binary classification; Gaia RUWE 1.27</td><td><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>Inconclusive</span></td></tr>
-        <tr><td><span class="mono">E15</span><a href="#fpp">False-positive probability</a></td><td>About 6%; nearby-star probability 0</td><td><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>Likely planet</span></td></tr>
+        <tr><td><span class="mono">E15</span><a href="#fpp">False-positive probability</a></td><td>About 6% from the transit alone; nearby-star probability 0</td><td><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>Likely planet</span></td></tr>
+        <tr><td><span class="mono">E16</span><a href="#asassn">Ground-based detection</a></td><td>ASAS-SN sees the dip at the predicted time: 8072 ± 1928 ppm (4.2σ)</td><td><span class="pill pill-good"><svg><use href="#i-check"/></svg>Detected</span></td></tr>
+        <tr><td><span class="mono">E17</span><a href="#fpp-phase">Whole-orbit limits</a></td><td>False-positive probability falls to about 3–4%</td><td><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>Likely planet</span></td></tr>
+        <tr><td><span class="mono">E18</span><a href="#archival-spectra">Archival spectra</a></td><td>None in the ESO, GALAH, APOGEE or SDSS-V archives</td><td><span class="pill pill-info"><svg><use href="#i-info"/></svg>None found</span></td></tr>
       </tbody>
     </table>
     </div>
@@ -277,6 +281,7 @@
     <div class="ev-head"><span class="ev-id">E15</span><h3>False-positive probability</h3><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>Likely planet</span><a class="permalink" href="#fpp">Copy link</a></div>
     <p class="result">The false-positive probability is about 6% (median 0.057 on both light curves). The probability that a known neighbouring star is responsible is 0.</p>
     <p class="why">Statistical validation needs a false-positive probability below 1.5%. This candidate falls in the "likely planet" class. All of the remaining false-positive weight sits in scenarios with an unseen companion star bound to the target, which high-resolution imaging would test. TRICERATOPS does not model brown dwarfs.</p>
+    <p class="why">A later calculation that also uses the rest of the orbit gives about 3–4% (<a href="#fpp-phase">E17</a>).</p>
     <h4>Scenario probabilities</h4>
     <div id="chart-scenarios"></div>
     <p class="caption">Mean of six runs of 10 million samples each on my own photometry. The pipeline light curve gives the same ranking.</p>
@@ -285,6 +290,76 @@
     <p class="caption">Each dot is one run. Runs with 1 million samples scattered from 0.005 to 0.47 and were discarded as not converged; they are in the data file.</p>
     <details class="tableview"><summary>Show data table</summary><div id="table-fpp"></div></details>
     <div class="files"><span class="files-label">Files</span><a href="data/triceratops_runs.csv">triceratops_runs.csv</a><a href="data/triceratops_scenarios.csv">triceratops_scenarios.csv</a><a href="evidence/catalogues/triceratops_probs_own1e7.csv">best-fit scenarios</a><a href="scripts/13_triceratops.py">13_triceratops.py</a><a href="scripts/12_prep_tri.py">12_prep_tri.py</a><a href="evidence/logs/triceratops_mission.txt">triceratops_mission.txt</a></div>
+  </article>
+</section>
+
+<!-- ============================================================ FURTHER CHECKS -->
+<section class="block" id="further-checks">
+  <h2>Further checks, added 11 November 2026</h2>
+  <p class="section-intro">Three desk checks made after the first version of this page. They strengthen the case. They do not confirm it.</p>
+
+  <article class="card ev" id="asassn">
+    <div class="ev-head"><span class="ev-id">E16</span><h3>Independent detection from the ground</h3><span class="pill pill-good"><svg><use href="#i-check"/></svg>Detected</span><a class="permalink" href="#asassn">Copy link</a></div>
+    <p class="result">ASAS-SN, a network of small ground-based telescopes, measured this star 2,883 times between 2014 and 2025. Folded on the TESS period, its data show a dip of 8072 ± 1928 ppm (4.2σ) at the predicted time.</p>
+    <p class="why">This is a different instrument, in blue-green light, with a 16″ aperture that is smaller than one TESS pixel. The depth is 0.89 ± 0.21 of what a planet on the target star predicts in those bands, so there is no sign that the depth changes with colour. The test is too weak to exclude a slightly redder host. The period holds for 1,258 orbits before the TESS reference epoch.</p>
+    <div id="chart-asassn"></div>
+    <p class="caption">Half-hour averages of 2,865 ASAS-SN measurements, with the transit model for each band. Uncertainties are large because only 76 measurements fall in transit.</p>
+    <h4>Where in the orbit is the dip?</h4>
+    <div id="chart-asassn-scan"></div>
+    <p class="caption">The same transit shape fitted at every phase of the orbit. The only feature above 3σ is a 5.0σ dip one scan step from the predicted phase.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th scope="col">Band</th><th scope="col" class="num">Measurements (in transit)</th><th scope="col" class="num">Depth (ppm)</th><th scope="col" class="num">Significance</th><th scope="col" class="num">Expected for a planet on the target (ppm)</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">g (2017–2025)</th><td class="num">2,290 (60)</td><td class="num">7645 ± 2041</td><td class="num">3.7σ</td><td class="num">9027</td></tr>
+        <tr><th scope="row">V (2014–2018)</th><td class="num">575 (16)</td><td class="num">9863 ± 4922</td><td class="num">2.0σ</td><td class="num">9349</td></tr>
+        <tr><th scope="row">V and g together</th><td class="num">2,865 (76)</td><td class="num">8072 ± 1928</td><td class="num">4.2σ</td><td class="num">9027</td></tr>
+      </tbody>
+    </table></div>
+    <p class="caption">Uncertainties come from fitting the same shape at 500 random phases. Two other archives were tried: the public SuperWASP archive stops at declination −55.1° and does not cover this star, and ATLAS was not checked because it needs an account.</p>
+    <details class="tableview"><summary>Show data table</summary><div id="table-asassn"></div></details>
+    <div class="files"><span class="files-label">Files</span><a href="data/asassn_folded_binned.csv">asassn_folded_binned.csv</a><a href="data/asassn_phase_scan.csv">asassn_phase_scan.csv</a><a href="data/asassn_detrended.csv">asassn_detrended.csv</a><a href="data/asassn_lightcurve.csv">asassn_lightcurve.csv</a><a href="scripts/20_asassn.py">20_asassn.py</a><a href="scripts/22_asassn_fold.py">22_asassn_fold.py</a><a href="evidence/logs/22_asassn_fold.txt">22_asassn_fold.txt</a><a href="evidence/figures/07_asassn.png">figure</a></div>
+  </article>
+
+  <article class="card ev" id="fpp-phase">
+    <div class="ev-head"><span class="ev-id">E17</span><h3>False-positive probability with the whole orbit included</h3><span class="pill pill-warn"><svg><use href="#i-warn"/></svg>Likely planet</span><a class="permalink" href="#fpp-phase">Copy link</a></div>
+    <p class="result">Adding the missing secondary eclipse (<a href="#secondary">E10</a>) and the missing tidal distortion (<a href="#ellipsoidal">E11</a>) to every eclipsing-binary scenario lowers the false-positive probability from about 6% to about 3–4%. That is still above the 1.5% needed for validation.</p>
+    <p class="why">TRICERATOPS fits only the hours around the transit. A star doing the eclipsing would also be hidden half an orbit later, and would stretch its host. Binaries that fit the transit predict a secondary eclipse of 400–600 ppm and a tidal signal of 90–160 ppm, and neither is seen, so those scenarios fall by factors of roughly 15 to 25.</p>
+    <p class="why">What remains is almost entirely a planet orbiting an unseen companion star bound to the target. These limits cannot test that, and its estimate varies from run to run (0.001–0.088). This is TRICERATOPS with two added terms, not the standard procedure, and both terms were set cautiously: the secondary eclipse was entered as 0 ± 130 ppm although −196 ppm was measured, and the predicted tidal signal was reduced by about 20%.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th scope="col">Twelve runs of 10 million samples</th><th scope="col" class="num">Transit only (E15)</th><th scope="col" class="num">With whole-orbit limits</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">False-positive probability, mean ± standard error</th><td class="num">0.068 ± 0.013</td><td class="num">0.037 ± 0.008</td></tr>
+        <tr><th scope="row">False-positive probability, median</th><td class="num">0.057</td><td class="num">0.031</td></tr>
+        <tr><th scope="row">Range over runs</th><td class="num">0.035–0.202</td><td class="num">0.006–0.091</td></tr>
+        <tr><th scope="row">Runs below 0.015</th><td class="num">0 of 12</td><td class="num">3 of 12</td></tr>
+        <tr><th scope="row">Eclipsing binary on the target, plus an unseen bound companion</th><td class="num">0.041</td><td class="num">0.0016</td></tr>
+        <tr><th scope="row">Eclipsing binary on an unseen bound companion</th><td class="num">0.005</td><td class="num">0.0003</td></tr>
+        <tr><th scope="row">Planet on an unseen bound companion</th><td class="num">0.021</td><td class="num">0.034</td></tr>
+        <tr><th scope="row">Nearby-star probability</th><td class="num">0</td><td class="num">0</td></tr>
+      </tbody>
+    </table></div>
+    <p class="caption">The two values in the "planet on an unseen bound companion" row are the same within sampling error; the added terms do not act on that scenario.</p>
+    <h4>Run-to-run spread</h4>
+    <div id="chart-fpp-phase"></div>
+    <p class="caption">Each dot is one run of 10 million samples. Summed over all scenarios, the probability that a planet-size body transits a star in this system is about 0.997. The open questions are which star it orbits, and its mass.</p>
+    <div class="files"><span class="files-label">Files</span><a href="data/triceratops_runs.csv">triceratops_runs.csv</a><a href="data/triceratops_scenarios.csv">triceratops_scenarios.csv</a><a href="scripts/21_triceratops_phase.py">21_triceratops_phase.py</a><a href="evidence/logs/21_triceratops_phase_own.txt">21_…_own.txt</a><a href="evidence/logs/21_triceratops_phase_pipeline.txt">21_…_pipeline.txt</a><a href="evidence/catalogues/triceratops_probs_own1e7_phase.csv">best-fit scenarios</a></div>
+  </article>
+
+  <article class="card ev" id="archival-spectra">
+    <div class="ev-head"><span class="ev-id">E18</span><h3>No archival spectra</h3><span class="pill pill-info"><svg><use href="#i-info"/></svg>None found</span><a class="permalink" href="#archival-spectra">Copy link</a></div>
+    <p class="result">No spectrum of this star exists in any archive searched, so a mass cannot be measured from existing data.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th scope="col">Archive</th><th scope="col">Result</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">ESO Science Archive (HARPS, FEROS, UVES and all other instruments)</th><td>No raw or reduced spectra within 30″; only VISTA near-infrared survey images</td></tr>
+        <tr><th scope="row">GALAH DR4</th><td>No match; no GALAH star within 1° of the target</td></tr>
+        <tr><th scope="row">APOGEE DR17</th><td>Field not observed</td></tr>
+        <tr><th scope="row">SDSS-V DR19 (Milky Way Mapper)</th><td>No APOGEE or BOSS spectra; the star is only listed as a possible calibration target</td></tr>
+        <tr><th scope="row">RAVE DR6, GALAH DR3</th><td>No match (<a href="#catalogues">E14</a>)</td></tr>
+      </tbody>
+    </table></div>
+    <p class="caption">Gaia DR4, planned for December 2026, is expected to publish per-visit radial velocities. Folded on this period they may limit the companion's mass to a few tens of Jupiter masses; that is an estimate, not a result.</p>
+    <div class="files"><span class="files-label">Files</span><a href="evidence/catalogues/archival_spectra_search.csv">archival_spectra_search.csv</a></div>
   </article>
 </section>
 
@@ -322,12 +397,12 @@
   <h2>What is not settled</h2>
   <div class="card">
     <ul class="plain">
-      <li><strong>No mass.</strong> There are no spectra, so a brown dwarf or a star at the very bottom of the main sequence is not excluded.</li>
+      <li><strong>No mass.</strong> No spectra exist in any archive searched (<a href="#archival-spectra">E18</a>), so a brown dwarf or a star at the very bottom of the main sequence is not excluded.</li>
       <li><strong>No high-resolution imaging.</strong> A close companion star cannot be ruled out, and Gaia's RUWE of 1.27 is mildly elevated.</li>
-      <li><strong>One band only.</strong> All photometry is from TESS. There is no ground-based or multi-colour transit.</li>
+      <li><strong>No precise transit in a second colour.</strong> ASAS-SN sees the dip in blue-green light at 4σ (<a href="#asassn">E16</a>), which is too weak to test whether the depth changes with colour.</li>
       <li><strong>QLP small-aperture anomaly.</strong> One pipeline product gives a much shallower, sector-dependent depth (<a href="#reduction">E7</a>). Direct photometry does not reproduce it, but the cause was not confirmed.</li>
       <li><strong>Sector 102 centroid.</strong> The offset there is 1.9σ (<a href="#centroid">E4</a>).</li>
-      <li><strong>Sector 1 has no data.</strong> In 2018 the star fell in the gap between two detectors, so the baseline starts in 2023.</li>
+      <li><strong>Sector 1 has no data.</strong> In 2018 the star fell in the gap between two detectors, so the TESS baseline starts in 2023.</li>
       <li><strong>Sector 105 time stamps.</strong> They use the detector-centre barycentric correction and can be off by up to 1.5 minutes.</li>
       <li><strong>Catalogue search is partial.</strong> The all-catalogue VizieR query failed (<a href="#catalogues">E14</a>).</li>
       <li><strong>Not peer reviewed.</strong> This is an independent analysis of public data.</li>
@@ -368,8 +443,8 @@
 
 <footer>
   <div class="wrap">
-    <p>This page uses data collected by the TESS mission, obtained from the MAST archive at the Space Telescope Science Institute, and data from the European Space Agency mission Gaia. Light curves from the TESS-SPOC and QLP pipelines were used alongside independent photometry.</p>
-    <p>Independent analysis, prepared with AI assistance (Claude). Not peer reviewed. Generated 10 November 2026.</p>
+    <p>This page uses data collected by the TESS mission, obtained from the MAST archive at the Space Telescope Science Institute, and data from the European Space Agency mission Gaia. Light curves from the TESS-SPOC and QLP pipelines were used alongside independent photometry. Ground-based photometry is from the All-Sky Automated Survey for Supernovae (ASAS-SN) Sky Patrol.</p>
+    <p>Independent analysis, prepared with AI assistance (Claude). Not peer reviewed. Generated 10 November 2026, updated 11 November 2026.</p>
   </div>
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>

@@ -23,3 +23,15 @@ light_curve,run,false_positive_probability,nearby_false_positive_probability
 "Pipeline light curve, 10^6 samples (not converged)",10,0.15889,0.0
 "Pipeline light curve, 10^6 samples (not converged)",11,0.00464,0.0
 "Pipeline light curve, 10^6 samples (not converged)",12,0.22704,0.0
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",1,0.03079,0.0
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",2,0.06368,0.0
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",3,0.05533,0.0
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",4,0.02155,0.0
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",5,0.01664,0.0
+"Pipeline light curve, 10^7 samples, with whole-orbit limits",6,0.09113,0.0
+"Own photometry, 10^7 samples, with whole-orbit limits",1,0.01299,0.0
+"Own photometry, 10^7 samples, with whole-orbit limits",2,0.00551,0.0
+"Own photometry, 10^7 samples, with whole-orbit limits",3,0.0078,0.0
+"Own photometry, 10^7 samples, with whole-orbit limits",4,0.03098,0.0
+"Own photometry, 10^7 samples, with whole-orbit limits",5,0.03188,0.0
+"Own photometry, 10^7 samples, with whole-orbit limits",6,0.07846,0.0

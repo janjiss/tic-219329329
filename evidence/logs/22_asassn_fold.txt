@@ -1,0 +1,16 @@
+rows: 3385 | quality flags: {'G': 2883, 'B': 498, 'U': 4}
+good rows: 2883 | span 6778-10838 (BJD-2450000) | ephemeris extrapolated up to 1258 orbits: timing uncertainty 6.2 min
+   camera bE (g):  393 points, scatter 1.06%
+   camera bF (g):  310 points, scatter 1.02%
+   camera be (V):  273 points, scatter 1.29%
+   camera bf (V):  302 points, scatter 1.20%
+   camera bi (g):  430 points, scatter 1.27%
+   camera bj (g):  395 points, scatter 0.87%
+   camera bm (g):  264 points, scatter 1.38%
+   camera bn (g):  278 points, scatter 0.91%
+   camera bp (g):  220 points, scatter 1.18%
+expected mid-transit depth for a planet on the target: TESS 9665 ppm
+V     575 points ( 16 in transit): depth  9863 +/- 4922 ppm (formal +/- 4332) = 2.0 sigma ; expected for a planet on target 9349 ppm ; ratio 1.05 +/- 0.53
+g    2290 points ( 60 in transit): depth  7645 +/- 2041 ppm (formal +/- 2045) = 3.7 sigma ; expected for a planet on target 9027 ppm ; ratio 0.85 +/- 0.23
+V+g  2865 points ( 76 in transit): depth  8072 +/- 1928 ppm (formal +/- 1854) = 4.2 sigma ; expected for a planet on target 9027 ppm ; ratio 0.89 +/- 0.21
+deepest template fit anywhere in the orbit: phase offset -0.004 of a period (5.0 sigma); at the predicted phase: 4.2 sigma

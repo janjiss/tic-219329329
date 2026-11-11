@@ -215,6 +215,53 @@
     V.table($("table-fpp"), [{ label: "Light curve and sample count" }, { label: "Run", num: true }, { label: "False-positive probability", num: true }, { label: "Nearby-star probability", num: true }], trows);
   });
 
+  /* ---------- E16 ASAS-SN */
+  safe("asassn", function () {
+    var A = E.asassn; if (!A) return;
+    var hfmt = function (v) { return fmt(v, 2) + " h"; }, pfmt = function (v) { return fmt(v, 2) + "%"; };
+    V.xy($("chart-asassn"), {
+      label: "ASAS-SN photometry folded on the TESS period: a dip at the predicted time", height: 340,
+      x: { min: -8, max: 8, label: "Hours from predicted mid-transit", name: "From predicted mid-transit", fmt: hfmt },
+      y: { min: -1.9, max: 1.3, label: "Change in brightness (%)", name: "Brightness", fmt: pfmt },
+      series: [
+        { kind: "line", name: "Transit model (g band)", color: "--s2", data: A.bands.g.model },
+        { kind: "points", name: "g band, half-hour averages", color: "--s1", data: A.bands.g.bins, dx: -0.06 },
+        { kind: "points", name: "V band, half-hour averages", color: "--s3", data: A.bands.V.bins, dx: 0.06 }
+      ]
+    });
+    V.xy($("chart-asassn-scan"), {
+      label: "Significance of a transit-shaped dip at every orbital phase in ASAS-SN data", height: 280,
+      x: { min: -0.5, max: 0.5, label: "Offset from the predicted transit time (fraction of an orbit)", name: "Phase offset", fmt: function (v) { return fmt(v, 3); }, digits: 1 },
+      y: { min: -3.5, max: 6, label: "Depth divided by its uncertainty", name: "Significance", fmt: function (v) { return fmt(v, 1) + "σ"; }, digits: 0 },
+      marks: [{ kind: "vline", x: 0, label: "Predicted transit" }],
+      series: [{ kind: "line", color: "--s1", data: A.scan, width: 1.75, hover: true }]
+    });
+    var rows = [];
+    ["g", "V"].forEach(function (b) { A.bands[b].bins.forEach(function (p) { rows.push([b, fmt(p[0], 2), fmt(p[1], 3), fmt(p[2], 3), p[3]]); }); });
+    V.table($("table-asassn"), [{ label: "Band" }, { label: "Hours from predicted mid-transit", num: true }, { label: "Brightness change (%)", num: true }, { label: "Uncertainty (%)", num: true }, { label: "Measurements", num: true }], rows, { limit: 40 });
+  });
+
+  /* ---------- E17 TRICERATOPS with whole-orbit limits */
+  safe("fpp-phase", function () {
+    var T = E.triceratops; if (!T.own1e7_phase) return;
+    var defs = [["mission1e7", "--s1", 1, 0], ["own1e7", "--s2", 1, 1], ["mission1e7_phase", "--s1", 2, 0], ["own1e7_phase", "--s2", 2, 1]];
+    var series = [["Pipeline light curve", "--s1", 0], ["Own photometry", "--s2", 1]].map(function (g) {
+      var data = [];
+      defs.forEach(function (d) {
+        if (d[3] !== g[2]) return;
+        var f = T[d[0]].fpp; f.forEach(function (v, i) { data.push([d[2] + (g[2] ? 0.07 : -0.37) + i * 0.06, v, null, [d[2] === 1 ? "Transit only" : "With whole-orbit limits", i + 1]]); });
+      });
+      return { kind: "points", name: g[0], color: g[1], err: false, data: data, tip: function (p) { return [[p[3][0], "run " + p[3][1]], ["False-positive probability", fmt(p[1], 3)]]; } };
+    });
+    V.xy($("chart-fpp-phase"), {
+      label: "False-positive probability of each run, before and after adding whole-orbit limits", height: 300, marginLeft: 54,
+      x: { min: 0.4, max: 2.6, ticks: [{ v: 1, label: "Transit only (E15)" }, { v: 2, label: "With whole-orbit limits" }] },
+      y: { min: 0, max: 0.22, label: "False-positive probability", digits: 2 },
+      marks: [{ kind: "hline", y: 0.015, label: "Validation threshold 0.015" }],
+      series: series
+    });
+  });
+
   /* ---------- parameters */
   safe("params", function () {
     var P = E.params, spec = [

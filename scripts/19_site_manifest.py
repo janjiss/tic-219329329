@@ -18,7 +18,7 @@ def clean_log(src, dst):
 for p in sorted(glob.glob(os.path.join(out, "logs", "*.txt"))): clean_log(p, os.path.join(ev, "logs", os.path.basename(p)))
 
 # ---- catalogue records
-shutil.copy(exofop, os.path.join(ev, "catalogues", "exofop_target.json"))
+if os.path.abspath(exofop) != os.path.abspath(os.path.join(ev, "catalogues", "exofop_target.json")): shutil.copy(exofop, os.path.join(ev, "catalogues", "exofop_target.json"))
 g = pd.read_csv(os.path.join(out, "gaia_neighbors.csv")).iloc[0].to_dict()
 g = {k: (None if isinstance(v, float) and v != v else (v.item() if hasattr(v, "item") else v)) for k, v in g.items()}
 g["source_id"] = str(int(g["source_id"]))
@@ -48,6 +48,19 @@ rows = [
 with open(os.path.join(ev, "catalogues", "crossmatch_results.csv"), "w", newline="") as fh:
     w = csv.writer(fh); w.writerow(["catalogue", "description", "search_radius", "result", "service"]); w.writerows(rows)
 
+spec = [
+ ("ESO Science Archive, reduced products", "30 arcsec box", "no spectra; only VISTA VHS near-infrared images and catalogue entries", "archive.eso.org/tap_obs (ivoa.ObsCore)"),
+ ("ESO Science Archive, raw frames", "30 arcsec box", "none from any instrument", "archive.eso.org/tap_obs (dbo.raw)"),
+ ("GALAH DR4", "Gaia DR3 source ID, and 10 arcsec box", "no match; no GALAH DR4 star within 1 degree", "datacentral.org.au/vo/tap (galah_dr4.mainstartable)"),
+ ("GALAH DR3", "3 arcsec", "no match", "VizieR J/MNRAS/506/150"),
+ ("APOGEE DR17", "5 arcsec, and 1 degree", "no match; field not observed", "VizieR III/286 and SDSS SkyServer DR17 (apogeeStar)"),
+ ("SDSS-V DR19 Milky Way Mapper, APOGEE and BOSS", "5 arcsec box", "no spectra; star is in the targeting database only (ops_std_boss, ops_gaia_brightneighbors)", "SDSS SkyServer DR19 (mwm_apogee_allvisit, mwm_boss_allvisit, apogee_drp_allvisit, mos_target)"),
+ ("RAVE DR6", "3 arcsec", "no match", "VizieR III/283"),
+ ("Gaia DR3 radial velocity", "by source ID", "-1.65 +/- 1.12 km/s from 34 visits, stacked cross-correlation; weak constraint", "gea.esac.esa.int"),
+]
+with open(os.path.join(ev, "catalogues", "archival_spectra_search.csv"), "w", newline="") as fh:
+    w = csv.writer(fh); w.writerow(["archive", "search", "result", "service"]); w.writerows(spec)
+
 # ---- manifest
 DESC = {
  "data/folded_transit_binned.csv": "Folded transit, 10-minute bins (chart E1)",
@@ -67,6 +80,20 @@ DESC = {
  "data/triceratops_runs.csv": "False-positive probability of every TRICERATOPS run (E15)",
  "data/triceratops_scenarios.csv": "Mean probability of each TRICERATOPS scenario (E15)",
  "evidence/vetting_report.md": "Written vetting report with all results in one document",
+ "data/asassn_folded_binned.csv": "ASAS-SN g and V photometry folded on the TESS ephemeris, half-hour bins (chart E16)",
+ "data/asassn_phase_scan.csv": "Transit template slid around the orbit in ASAS-SN data (chart E16)",
+ "data/asassn_detrended.csv": "ASAS-SN photometry after per-camera normalisation, with orbital phase",
+ "data/asassn_lightcurve.csv": "ASAS-SN Sky Patrol v2 light curve as downloaded, 3385 measurements, 2014-2025",
+ "evidence/figures/07_asassn.png": "Diagnostic plot: ASAS-SN g and V folded, and the phase scan",
+ "evidence/logs/21_triceratops_phase_own.txt": "TRICERATOPS with whole-orbit limits, own photometry, 6 runs of 10^7 samples (E17)",
+ "evidence/logs/21_triceratops_phase_pipeline.txt": "TRICERATOPS with whole-orbit limits, pipeline light curve, 6 runs of 10^7 samples (E17)",
+ "evidence/logs/22_asassn_fold.txt": "Output of 22_asassn_fold.py: ASAS-SN depths, significance and phase scan (E16)",
+ "evidence/catalogues/archival_spectra_search.csv": "Result of each archival spectra search (E18)",
+ "evidence/catalogues/triceratops_probs_own1e7_phase.csv": "TRICERATOPS best-fit parameters per scenario with whole-orbit limits, own photometry",
+ "evidence/catalogues/triceratops_probs_mission1e7_phase.csv": "TRICERATOPS best-fit parameters per scenario with whole-orbit limits, pipeline light curve",
+ "scripts/20_asassn.py": "Download the ASAS-SN light curve",
+ "scripts/21_triceratops_phase.py": "TRICERATOPS with the secondary-eclipse and ellipsoidal limits added",
+ "scripts/22_asassn_fold.py": "Fold ASAS-SN photometry on the TESS ephemeris and measure the depth",
  "evidence/figures/01_raw_lightcurves.png": "Diagnostic plot: pipeline light curves per sector before detrending",
  "evidence/figures/02_bls.png": "Diagnostic plot: period search and first folded transit",
  "evidence/figures/03_vetting_lc.png": "Diagnostic plot: odd/even, secondary scan, per-transit depth and timing (pipeline light curves)",

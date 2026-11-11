@@ -7,6 +7,10 @@ Every data product, log, figure and script in this folder. Paths are relative to
 | File | What it is | Size |
 |---|---|---|
 | [data/aperture_depths.csv](data/aperture_depths.csv) | Transit depth per sector and aperture size (E6) | 571 B |
+| [data/asassn_detrended.csv](data/asassn_detrended.csv) | ASAS-SN photometry after per-camera normalisation, with orbital phase | 236 kB |
+| [data/asassn_folded_binned.csv](data/asassn_folded_binned.csv) | ASAS-SN g and V photometry folded on the TESS ephemeris, half-hour bins (chart E16) | 1 kB |
+| [data/asassn_lightcurve.csv](data/asassn_lightcurve.csv) | ASAS-SN Sky Patrol v2 light curve as downloaded, 3385 measurements, 2014-2025 | 498 kB |
+| [data/asassn_phase_scan.csv](data/asassn_phase_scan.csv) | Transit template slid around the orbit in ASAS-SN data (chart E16) | 4 kB |
 | [data/bls_periodogram.csv](data/bls_periodogram.csv) | Box-least-squares period search, sectors 102-104 (chart E3) | 467 kB |
 | [data/centroid_offsets.csv](data/centroid_offsets.csv) | Difference-image centroid offsets per sector (E4) | 328 B |
 | [data/depth_vs_reduction.csv](data/depth_vs_reduction.csv) | Transit depth for each pipeline product and detrending window (E7) | 905 B |
@@ -20,14 +24,14 @@ Every data product, log, figure and script in this folder. Paths are relative to
 | [data/parameters.csv](data/parameters.csv) | Posterior medians and 68% intervals for both fits | 1 kB |
 | [data/transit_model.csv](data/transit_model.csv) | Best-fit transit model curve (chart E1) | 8 kB |
 | [data/transit_times.csv](data/transit_times.csv) | Individual mid-transit times, residuals and depths for 34 transits (E12) | 2 kB |
-| [data/triceratops_runs.csv](data/triceratops_runs.csv) | False-positive probability of every TRICERATOPS run (E15) | 1 kB |
-| [data/triceratops_scenarios.csv](data/triceratops_scenarios.csv) | Mean probability of each TRICERATOPS scenario (E15) | 1 kB |
+| [data/triceratops_runs.csv](data/triceratops_runs.csv) | False-positive probability of every TRICERATOPS run (E15) | 2 kB |
+| [data/triceratops_scenarios.csv](data/triceratops_scenarios.csv) | Mean probability of each TRICERATOPS scenario (E15) | 4 kB |
 
 ## Report
 
 | File | What it is | Size |
 |---|---|---|
-| [evidence/vetting_report.md](evidence/vetting_report.md) | Written vetting report with all results in one document | 7 kB |
+| [evidence/vetting_report.md](evidence/vetting_report.md) | Written vetting report with all results in one document | 12 kB |
 
 ## Diagnostic plots
 
@@ -39,6 +43,7 @@ Every data product, log, figure and script in this folder. Paths are relative to
 | [evidence/figures/04_centroid.png](evidence/figures/04_centroid.png) | Diagnostic plot: out-of-transit and difference images | 93 kB |
 | [evidence/figures/05_extra_signals.png](evidence/figures/05_extra_signals.png) | Diagnostic plot: residual period search and stellar variability | 114 kB |
 | [evidence/figures/06_independent_photometry.png](evidence/figures/06_independent_photometry.png) | Diagnostic plot: own photometry folded, odd/even, timing, full orbit | 132 kB |
+| [evidence/figures/07_asassn.png](evidence/figures/07_asassn.png) | Diagnostic plot: ASAS-SN g and V folded, and the phase scan | 72 kB |
 
 ## Script output
 
@@ -51,6 +56,9 @@ Every data product, log, figure and script in this folder. Paths are relative to
 | [evidence/logs/14_apertures.txt](evidence/logs/14_apertures.txt) | Output of 14_apertures.py: depth vs aperture, sector 105 timing, depth vs reduction (E6, E7, E12) | 3 kB |
 | [evidence/logs/15_extra_signals.txt](evidence/logs/15_extra_signals.txt) | Output of 15_extra_signals.py: residual search and variability (E13) | 2 kB |
 | [evidence/logs/17_own_checks.txt](evidence/logs/17_own_checks.txt) | Output of 17_own_checks.py: odd/even, secondary and timing on own photometry (E9, E10, E12) | 486 B |
+| [evidence/logs/21_triceratops_phase_own.txt](evidence/logs/21_triceratops_phase_own.txt) | TRICERATOPS with whole-orbit limits, own photometry, 6 runs of 10^7 samples (E17) | 2 kB |
+| [evidence/logs/21_triceratops_phase_pipeline.txt](evidence/logs/21_triceratops_phase_pipeline.txt) | TRICERATOPS with whole-orbit limits, pipeline light curve, 6 runs of 10^7 samples (E17) | 2 kB |
+| [evidence/logs/22_asassn_fold.txt](evidence/logs/22_asassn_fold.txt) | Output of 22_asassn_fold.py: ASAS-SN depths, significance and phase scan (E16) | 1 kB |
 | [evidence/logs/fit_free.txt](evidence/logs/fit_free.txt) | MCMC transit fit, pipeline light curves, stellar density free | 927 B |
 | [evidence/logs/fit_free_own.txt](evidence/logs/fit_free_own.txt) | MCMC transit fit, own photometry, stellar density free | 942 B |
 | [evidence/logs/fit_prior.txt](evidence/logs/fit_prior.txt) | MCMC transit fit, pipeline light curves, stellar density prior | 921 B |
@@ -61,13 +69,16 @@ Every data product, log, figure and script in this folder. Paths are relative to
 
 | File | What it is | Size |
 |---|---|---|
+| [evidence/catalogues/archival_spectra_search.csv](evidence/catalogues/archival_spectra_search.csv) | Result of each archival spectra search (E18) | 1 kB |
 | [evidence/catalogues/crossmatch_results.csv](evidence/catalogues/crossmatch_results.csv) | Result of each catalogue cross-match (E14) | 2 kB |
 | [evidence/catalogues/exofop_target.json](evidence/catalogues/exofop_target.json) | ExoFOP-TESS record of the target (no TOI or CTOI) | 7 kB |
 | [evidence/catalogues/gaia_neighbors.csv](evidence/catalogues/gaia_neighbors.csv) | Gaia DR3 query result, all columns, 150 arcsec cone | 8 kB |
 | [evidence/catalogues/gaia_target.json](evidence/catalogues/gaia_target.json) | Gaia DR3 record of the target star | 1 kB |
 | [evidence/catalogues/mast_products.json](evidence/catalogues/mast_products.json) | MAST archive identifiers of the pipeline products used | 2 kB |
 | [evidence/catalogues/triceratops_probs_mission1e7.csv](evidence/catalogues/triceratops_probs_mission1e7.csv) | TRICERATOPS best-fit parameters per scenario, pipeline light curve | 3 kB |
+| [evidence/catalogues/triceratops_probs_mission1e7_phase.csv](evidence/catalogues/triceratops_probs_mission1e7_phase.csv) | TRICERATOPS best-fit parameters per scenario with whole-orbit limits, pipeline light curve | 3 kB |
 | [evidence/catalogues/triceratops_probs_own1e7.csv](evidence/catalogues/triceratops_probs_own1e7.csv) | TRICERATOPS best-fit parameters per scenario, own photometry | 3 kB |
+| [evidence/catalogues/triceratops_probs_own1e7_phase.csv](evidence/catalogues/triceratops_probs_own1e7_phase.csv) | TRICERATOPS best-fit parameters per scenario with whole-orbit limits, own photometry | 3 kB |
 
 ## Posterior samples
 
@@ -110,6 +121,9 @@ Every data product, log, figure and script in this folder. Paths are relative to
 | [scripts/15_extra_signals.py](scripts/15_extra_signals.py) | Search for other signals and stellar variability | 5 kB |
 | [scripts/16_catalogues.py](scripts/16_catalogues.py) | SIMBAD and VizieR cross-matches | 4 kB |
 | [scripts/17_own_checks.py](scripts/17_own_checks.py) | Odd/even, secondary and timing on own photometry | 6 kB |
-| [scripts/18_export_site.py](scripts/18_export_site.py) | Export the data shown on this site | 14 kB |
-| [scripts/19_site_manifest.py](scripts/19_site_manifest.py) | Write this file list and the folder index pages | 14 kB |
+| [scripts/18_export_site.py](scripts/18_export_site.py) | Export the data shown on this site | 15 kB |
+| [scripts/19_site_manifest.py](scripts/19_site_manifest.py) | Write this file list and the folder index pages | 17 kB |
+| [scripts/20_asassn.py](scripts/20_asassn.py) | Download the ASAS-SN light curve | 1 kB |
+| [scripts/21_triceratops_phase.py](scripts/21_triceratops_phase.py) | TRICERATOPS with the secondary-eclipse and ellipsoidal limits added | 7 kB |
+| [scripts/22_asassn_fold.py](scripts/22_asassn_fold.py) | Fold ASAS-SN photometry on the TESS ephemeris and measure the depth | 7 kB |
 | [scripts/common.py](scripts/common.py) | Shared loaders, detrending and transit model | 5 kB |

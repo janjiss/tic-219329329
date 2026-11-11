@@ -135,7 +135,8 @@ wcsv("gaia_neighbours.csv", ["gaia_dr3_source_id", "separation_arcsec", "delta_r
 
 # 9. TRICERATOPS
 tri = {}
-for tag, label in (("mission1e7", "Pipeline light curve, 10^7 samples"), ("own1e7", "Own photometry, 10^7 samples"), ("mission", "Pipeline light curve, 10^6 samples (not converged)")):
+for tag, label in (("mission1e7", "Pipeline light curve, 10^7 samples"), ("own1e7", "Own photometry, 10^7 samples"), ("mission", "Pipeline light curve, 10^6 samples (not converged)"),
+                   ("mission1e7_phase", "Pipeline light curve, 10^7 samples, with whole-orbit limits"), ("own1e7_phase", "Own photometry, 10^7 samples, with whole-orbit limits")):
     runs = np.atleast_2d(np.loadtxt(os.path.join(out, f"triceratops_runs_{tag}.txt")))
     tri[tag] = dict(label=label, fpp=[R(v, 5) for v in runs[:, 0]], nfpp=[R(v, 6) for v in runs[:, 1]])
     sc = os.path.join(out, f"triceratops_scenarios_{tag}.csv")
@@ -144,6 +145,16 @@ for tag, label in (("mission1e7", "Pipeline light curve, 10^7 samples"), ("own1e
 E["triceratops"] = tri
 wcsv("triceratops_runs.csv", ["light_curve", "run", "false_positive_probability", "nearby_false_positive_probability"], [[v["label"], i + 1, a, b] for v in tri.values() for i, (a, b) in enumerate(zip(v["fpp"], v["nfpp"]))])
 wcsv("triceratops_scenarios.csv", ["light_curve", "scenario", "mean_probability"], [[v["label"], k, p] for v in tri.values() if "scenarios" in v for k, p in v["scenarios"].items()])
+
+# 10. ASAS-SN ground-based photometry (scripts/20_asassn.py, 22_asassn_fold.py)
+asn = os.path.join(out, "asassn_site.json")
+if os.path.exists(asn):
+    E["asassn"] = json.load(open(asn))
+    wcsv("asassn_folded_binned.csv", ["band", "hours_from_predicted_midtransit", "flux_change_percent", "err_percent", "n_points"], [[b_, *row] for b_, v in E["asassn"]["bands"].items() for row in v["bins"]])
+    wcsv("asassn_phase_scan.csv", ["phase_offset_fraction_of_period", "depth_over_empirical_error"], E["asassn"]["scan"])
+    shutil.copy(os.path.join(out, "asassn_detrended.csv"), os.path.join(D, "asassn_detrended.csv"))
+    raw = os.path.join(os.path.dirname(os.path.abspath(out)), "data", "asassn", "asassn_lightcurve.csv")
+    if os.path.exists(raw): shutil.copy(raw, os.path.join(D, "asassn_lightcurve.csv"))
 
 # ---------------------------------------------------------------- copy evidence files
 ev = os.path.join(site, "evidence")
@@ -161,7 +172,7 @@ def clean_log(src, dst):
 for name in ("fit_free.log", "fit_prior.log", "fit_free_own.log", "fit_prior_own.log", "triceratops_mission.log"):
     if os.path.exists(os.path.join(out, name)): clean_log(os.path.join(out, name), os.path.join(ev, "logs", name.replace(".log", ".txt")))
 for name in ("chain_free.npy", "chain_prior.npy", "chain_free_own.npy", "chain_prior_own.npy"): shutil.copy(os.path.join(out, name), os.path.join(ev, "posteriors"))
-for name in ("gaia_neighbors.csv", "mast_products.json", "triceratops_probs_mission1e7.csv", "triceratops_probs_own1e7.csv"):
+for name in ("gaia_neighbors.csv", "mast_products.json", "triceratops_probs_mission1e7.csv", "triceratops_probs_own1e7.csv", "triceratops_probs_mission1e7_phase.csv", "triceratops_probs_own1e7_phase.csv"):
     if os.path.exists(os.path.join(out, name)): shutil.copy(os.path.join(out, name), os.path.join(ev, "catalogues"))
 for p in glob.glob(os.path.join(mast_dir, "**", "*_lc.fits"), recursive=True) + glob.glob(os.path.join(mast_dir, "**", "*_llc.fits"), recursive=True): shutil.copy(p, os.path.join(ev, "raw"))
 shutil.copy(report, os.path.join(ev, "vetting_report.md"))
